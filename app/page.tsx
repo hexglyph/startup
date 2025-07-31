@@ -205,7 +205,8 @@ export default function HomePage() {
             </div>
             <div className="text-gray-600 text-center md:text-right">
               <p>{t.footer.tagline}</p>
-              <p className="text-sm mt-1">{t.footer.copyright.replace("2024", "2025")}</p>
+              <p className="text-sm mt-1">{t.footer.contact}</p>
+              <p className="text-sm mt-1">{t.footer.copyright}</p>
             </div>
           </div>
         </div>

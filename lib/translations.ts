@@ -64,7 +64,8 @@ export const translations = {
     },
     footer: {
       tagline: "Technology • Artificial Intelligence • Innovation",
-      copyright: "© 2024 Hexglyph. Transforming ideas into reality.",
+      copyright: "© 2025 Hexglyph. Transforming ideas into reality.",
+      contact: "hex@hexglyph.com",
     },
   },
   pt: {
@@ -134,7 +135,8 @@ export const translations = {
     },
     footer: {
       tagline: "Tecnologia • Inteligência Artificial • Inovação",
-      copyright: "© 2024 Hexglyph. Transformando ideias em realidade.",
+      copyright: "© 2025 Hexglyph. Transformando ideias em realidade.",
+      contact: "hex@hexglyph.com",
     },
   },
 }
