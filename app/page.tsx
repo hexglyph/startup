@@ -130,8 +130,55 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Projects Section */}
+      <section id="projects" className="py-20 px-4 bg-gray-50">
+        <div className="container mx-auto">
+          <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">
+            {t.projects.title} <span className="text-gray-600">{t.projects.titleHighlight}</span>
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {t.projects.items.map((project) => {
+              const Icon = projectIcons[project.id] ?? Globe
+              const projectUrl = project.domain.startsWith("http") ? project.domain : `https://${project.domain}`
+
+              return (
+                <a
+                  key={project.id}
+                  href={projectUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-50 rounded-xl"
+                >
+                  <Card className="bg-white border-gray-200 hover:shadow-xl transition-shadow h-full">
+                    <CardHeader>
+                      <div className="flex items-center justify-between">
+                        <Icon className="h-12 w-12 text-gray-700" />
+                        <Badge variant="outline" className="text-gray-600 border-gray-200">
+                          {project.domain}
+                        </Badge>
+                      </div>
+                      <CardTitle className="text-gray-900 text-xl mt-4">{project.title}</CardTitle>
+                      <CardDescription className="text-gray-600">{project.description}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="flex flex-wrap gap-2">
+                        {project.stack.map((item: string) => (
+                          <Badge key={item} variant="secondary" className="bg-gray-100 text-gray-700">
+                            {item}
+                          </Badge>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </a>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Products Section */}
-      <section id="products" className="py-20 px-4 bg-gray-50">
+      <section id="products" className="py-20 px-4 bg-white">
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">
             {t.products.title} <span className="text-gray-600">{t.products.titleHighlight}</span>
@@ -189,44 +236,6 @@ export default function HomePage() {
                 </ul>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Section */}
-      <section id="projects" className="py-20 px-4 bg-white">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">
-            {t.projects.title} <span className="text-gray-600">{t.projects.titleHighlight}</span>
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {t.projects.items.map((project) => {
-              const Icon = projectIcons[project.id] ?? Globe
-
-              return (
-                <Card key={project.id} className="bg-white border-gray-200 hover:shadow-xl transition-shadow">
-                  <CardHeader>
-                    <div className="flex items-center justify-between">
-                      <Icon className="h-12 w-12 text-gray-700" />
-                      <Badge variant="outline" className="text-gray-600 border-gray-200">
-                        {project.domain}
-                      </Badge>
-                    </div>
-                    <CardTitle className="text-gray-900 text-xl mt-4">{project.title}</CardTitle>
-                    <CardDescription className="text-gray-600">{project.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex flex-wrap gap-2">
-                      {project.stack.map((item: string) => (
-                        <Badge key={item} variant="secondary" className="bg-gray-100 text-gray-700">
-                          {item}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              )
-            })}
           </div>
         </div>
       </section>
