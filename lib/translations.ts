@@ -3,6 +3,7 @@ export const translations = {
     nav: {
       services: "Services",
       products: "Products",
+      projects: "Projects",
       contact: "Contact",
     },
     hero: {
@@ -55,6 +56,52 @@ export const translations = {
         features: ["Tailored solutions", "Integration with existing systems", "Specialized support"],
       },
     },
+    projects: {
+      title: "Featured",
+      titleHighlight: "Projects",
+      items: [
+        {
+          id: "municipal",
+          domain: "municipal.hexglyph.com",
+          title: "Brazilian Municipal Redimensioning",
+          description:
+            "Scenario modeling and territorial analysis to support Brazilian municipal resizing initiatives using Python and public data pipelines.",
+          stack: ["Python", "Geospatial data", "Automated reports"],
+        },
+        {
+          id: "portal",
+          domain: "portal.hexglyph.com",
+          title: "Municipal Intelligence Portal",
+          description:
+            "Unified portal for city halls with intelligent search, powered by AI assistants and vector databases to surface strategic insights.",
+          stack: ["Next.js", "AI assistants", "Vector search"],
+        },
+        {
+          id: "vereadores",
+          domain: "vereadores.hexglyph.com.br",
+          title: "Council Member Data Hub",
+          description:
+            "Centralized dataset of council members enriched with integrated AI for discovery, monitoring, and personalized briefings.",
+          stack: ["Data lake", "AI enrichment", "Knowledge graph"],
+        },
+        {
+          id: "precast",
+          domain: "precast.hexglyph.com",
+          title: "Urban Management Suite",
+          description:
+            "Operational control tower for city management with dashboards, task automation, and predictive indicators.",
+          stack: ["City operations", "Automation", "Predictive analytics"],
+        },
+        {
+          id: "city",
+          domain: "city.hexglyph.com",
+          title: "Civic Gamification Platform",
+          description:
+            "Gamified engagement platform encouraging citizens and municipal teams to collaborate through missions, rewards, and feedback loops.",
+          stack: ["Gamification", "Civic engagement", "Mobile-first"],
+        },
+      ],
+    },
     cta: {
       title: "Ready to",
       titleHighlight: "Innovate",
@@ -72,6 +119,7 @@ export const translations = {
     nav: {
       services: "Serviços",
       products: "Produtos",
+      projects: "Projetos",
       contact: "Contato",
     },
     hero: {
@@ -125,6 +173,52 @@ export const translations = {
         description: "Desenvolvimento de aplicações customizadas com implementação de IA específica para seu negócio.",
         features: ["Soluções sob medida", "Integração com sistemas existentes", "Suporte especializado"],
       },
+    },
+    projects: {
+      title: "Projetos",
+      titleHighlight: "Destaque",
+      items: [
+        {
+          id: "municipal",
+          domain: "municipal.hexglyph.com",
+          title: "Redimensionamento Municipal Brasileiro",
+          description:
+            "Modelagem de cenários e análise territorial para apoiar iniciativas de redimensionamento municipal brasileiro usando Python e pipelines de dados públicos.",
+          stack: ["Python", "Dados geoespaciais", "Relatórios automatizados"],
+        },
+        {
+          id: "portal",
+          domain: "portal.hexglyph.com",
+          title: "Portal Municipal Inteligente",
+          description:
+            "Portal unificado para prefeituras com buscas inteligentes, assistentes de IA e bancos vetoriais para revelar insights estratégicos.",
+          stack: ["Next.js", "Assistentes de IA", "Busca vetorial"],
+        },
+        {
+          id: "vereadores",
+          domain: "vereadores.hexglyph.com.br",
+          title: "Hub de Dados de Vereadores",
+          description:
+            "Base centralizada sobre vereadores com IA integrada para descoberta, monitoramento e briefings personalizados.",
+          stack: ["Data lake", "Enriquecimento com IA", "Knowledge graph"],
+        },
+        {
+          id: "precast",
+          domain: "precast.hexglyph.com",
+          title: "Suite de Gestão Urbana",
+          description:
+            "Torre de controle operacional para gestão da cidade com dashboards, automatização de tarefas e indicadores preditivos.",
+          stack: ["Operações municipais", "Automação", "Analytics preditivo"],
+        },
+        {
+          id: "city",
+          domain: "city.hexglyph.com",
+          title: "Plataforma de Gamificação Cívica",
+          description:
+            "Plataforma gamificada que incentiva cidadãos e equipes municipais a colaborarem por meio de missões, recompensas e ciclos contínuos de feedback.",
+          stack: ["Gamificação", "Engajamento cívico", "Mobile-first"],
+        },
+      ],
     },
     cta: {
       title: "Pronto para",

@@ -3,10 +3,19 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Bot, Code, Database, Zap, Users, Search, Cog } from "lucide-react"
+import { ArrowRight, Bot, Code, Database, Zap, Users, Search, Cog, Globe, Map, Sparkles, Building2 } from "lucide-react"
+import type { LucideIcon } from "lucide-react"
 import Image from "next/image"
 import { useLanguage } from "@/hooks/use-language"
 import { translations } from "@/lib/translations"
+
+const projectIcons: Record<string, LucideIcon> = {
+  municipal: Map,
+  portal: Globe,
+  vereadores: Users,
+  precast: Building2,
+  city: Sparkles,
+}
 
 export default function HomePage() {
   const { language } = useLanguage()
@@ -27,6 +36,9 @@ export default function HomePage() {
             </a>
             <a href="#products" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
               {t.nav.products}
+            </a>
+            <a href="#projects" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
+              {t.nav.projects}
             </a>
             <a href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
               {t.nav.contact}
@@ -177,6 +189,44 @@ export default function HomePage() {
                 </ul>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="py-20 px-4 bg-white">
+        <div className="container mx-auto">
+          <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">
+            {t.projects.title} <span className="text-gray-600">{t.projects.titleHighlight}</span>
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {t.projects.items.map((project) => {
+              const Icon = projectIcons[project.id] ?? Globe
+
+              return (
+                <Card key={project.id} className="bg-white border-gray-200 hover:shadow-xl transition-shadow">
+                  <CardHeader>
+                    <div className="flex items-center justify-between">
+                      <Icon className="h-12 w-12 text-gray-700" />
+                      <Badge variant="outline" className="text-gray-600 border-gray-200">
+                        {project.domain}
+                      </Badge>
+                    </div>
+                    <CardTitle className="text-gray-900 text-xl mt-4">{project.title}</CardTitle>
+                    <CardDescription className="text-gray-600">{project.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex flex-wrap gap-2">
+                      {project.stack.map((item: string) => (
+                        <Badge key={item} variant="secondary" className="bg-gray-100 text-gray-700">
+                          {item}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              )
+            })}
           </div>
         </div>
       </section>
