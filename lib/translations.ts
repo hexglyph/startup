@@ -37,6 +37,7 @@ export const translations = {
     products: {
       title: "Our",
       titleHighlight: "Products",
+      featuredLabel: "Featured",
       cem: {
         title: "CEM Platform",
         subtitle: "Community Engagement Management",
@@ -59,10 +60,18 @@ export const translations = {
     projects: {
       title: "Featured",
       titleHighlight: "Projects",
+      currentLabel: "Current main project",
       items: [
         {
+          id: "orquestra",
+          title: "Orquestra",
+          description:
+            "Local-first orchestration platform for technical teams, combining governed Work Items, observable LLM agent sessions, legacy modernization pipelines, a Windows desktop shell, and portfolio snapshots.",
+          stack: ["Local-first", "LLM agents", "Legacy modernization"],
+          isCurrent: true,
+        },
+        {
           id: "municipal",
-          domain: "municipal.hexglyph.com",
           title: "Brazilian Municipal Redimensioning",
           description:
             "Scenario modeling and territorial analysis to support Brazilian municipal resizing initiatives using Python and public data pipelines.",
@@ -70,7 +79,6 @@ export const translations = {
         },
         {
           id: "portal",
-          domain: "portal.hexglyph.com",
           title: "Municipal Intelligence Portal",
           description:
             "Unified portal for city halls with intelligent search, powered by AI assistants and vector databases to surface strategic insights.",
@@ -78,7 +86,6 @@ export const translations = {
         },
         {
           id: "vereadores",
-          domain: "vereadores.hexglyph.com.br",
           title: "Council Member Data Hub",
           description:
             "Centralized dataset of council members enriched with integrated AI for discovery, monitoring, and personalized briefings.",
@@ -86,7 +93,6 @@ export const translations = {
         },
         {
           id: "precast",
-          domain: "precast.hexglyph.com",
           title: "Urban Management Suite",
           description:
             "Operational control tower for city management with dashboards, task automation, and predictive indicators.",
@@ -94,7 +100,6 @@ export const translations = {
         },
         {
           id: "city",
-          domain: "city.hexglyph.com",
           title: "Civic Gamification Platform",
           description:
             "Gamified engagement platform encouraging citizens and municipal teams to collaborate through missions, rewards, and feedback loops.",
@@ -110,127 +115,131 @@ export const translations = {
       button: "Start Project",
     },
     footer: {
-      tagline: "Technology • Artificial Intelligence • Innovation",
+      tagline: "Technology - Artificial Intelligence - Innovation",
       copyright: "© 2025 Hexglyph. Transforming ideas into reality.",
       contact: "hex@hexglyph.com",
     },
   },
-  pt: {
+  ja: {
     nav: {
-      services: "Serviços",
-      products: "Produtos",
-      projects: "Projetos",
-      contact: "Contato",
+      services: "サービス",
+      products: "プロダクト",
+      projects: "プロジェクト",
+      contact: "お問い合わせ",
     },
     hero: {
-      title: "Tecnologia que",
-      titleHighlight: "Transforma",
+      title: "ビジネスを変える",
+      titleHighlight: "テクノロジー",
       description:
-        "Somos uma empresa de tecnologia focada em desenvolvimento de software e inteligência artificial. Criamos soluções personalizadas usando tecnologias modernas, combinando automação, análise de dados e IA para resolver problemas reais de negócio.",
-      cta1: "Conheça Nossos Produtos",
-      cta2: "Fale Conosco",
+        "Hexglyphは、ソフトウェア開発と人工知能に特化したテクノロジー企業です。自動化、データ分析、AIを組み合わせ、現実のビジネス課題を解決するカスタムソリューションを設計・開発します。",
+      cta1: "プロダクトを見る",
+      cta2: "相談する",
     },
     services: {
-      title: "Nossos",
-      titleHighlight: "Serviços",
+      title: "提供",
+      titleHighlight: "サービス",
       web: {
-        title: "Desenvolvimento Web",
-        description: "Plataformas web modernas e responsivas usando as mais recentes tecnologias.",
+        title: "Web開発",
+        description: "最新技術を活用した、モダンでレスポンシブなWebプラットフォームを構築します。",
       },
       api: {
-        title: "APIs & Integrações",
-        description: "APIs robustas e integrações personalizadas para conectar seus sistemas.",
+        title: "APIと連携",
+        description: "既存システムをつなぐ堅牢なAPIとカスタム連携を開発します。",
       },
       ai: {
-        title: "Inteligência Artificial",
-        description: "Implementação de IA nos processos para produtividade e tomada de decisão.",
+        title: "人工知能",
+        description: "業務プロセスにAIを組み込み、生産性と意思決定を高めます。",
       },
       automation: {
-        title: "Automação",
-        description: "Ferramentas internas e automação de processos para otimizar operações.",
+        title: "自動化",
+        description: "社内ツールとプロセス自動化により、運用を最適化します。",
       },
     },
     products: {
-      title: "Nossos",
-      titleHighlight: "Produtos",
+      title: "提供",
+      titleHighlight: "プロダクト",
+      featuredLabel: "注目",
       cem: {
         title: "CEM Platform",
-        subtitle: "Community Engagement Management",
-        description:
-          "Plataforma completa para engajamento comunitário, missões gamificadas e participação ativa dos usuários.",
-        features: ["Sistema de missões e recompensas", "Analytics de engajamento", "Gestão de comunidades"],
+        subtitle: "コミュニティエンゲージメント管理",
+        description: "コミュニティ参加、ゲーミフィケーションされたミッション、能動的なユーザー参加を支える統合プラットフォームです。",
+        features: ["ミッションと報酬システム", "エンゲージメント分析", "コミュニティ管理"],
       },
       research: {
         title: "AI Content Research",
-        subtitle: "Pesquisa Inteligente de Conteúdo",
-        description:
-          "Ferramenta de pesquisa avançada com IA para descobrir e analisar conteúdo relevante automaticamente.",
-        features: ["Análise semântica avançada", "Extração de insights", "Relatórios automatizados"],
+        subtitle: "インテリジェントなコンテンツ調査",
+        description: "AIを活用し、関連コンテンツの発見と分析を自動化する高度なリサーチツールです。",
+        features: ["高度な意味解析", "インサイト抽出", "自動レポート"],
       },
       custom: {
         title: "Custom AI Solutions",
-        subtitle: "Aplicações Personalizadas",
-        description: "Desenvolvimento de aplicações customizadas com implementação de IA específica para seu negócio.",
-        features: ["Soluções sob medida", "Integração com sistemas existentes", "Suporte especializado"],
+        subtitle: "カスタムアプリケーション",
+        description: "ビジネス要件に合わせて、AIを組み込んだカスタムアプリケーションを開発します。",
+        features: ["要件に合わせた設計", "既存システムとの統合", "専門サポート"],
       },
     },
     projects: {
-      title: "Projetos",
-      titleHighlight: "Destaque",
+      title: "注目",
+      titleHighlight: "プロジェクト",
+      currentLabel: "現在の主要プロジェクト",
       items: [
         {
-          id: "municipal",
-          domain: "municipal.hexglyph.com",
-          title: "Redimensionamento Municipal Brasileiro",
+          id: "orquestra",
+          title: "Orquestra",
           description:
-            "Modelagem de cenários e análise territorial para apoiar iniciativas de redimensionamento municipal brasileiro usando Python e pipelines de dados públicos.",
-          stack: ["Python", "Dados geoespaciais", "Relatórios automatizados"],
+            "技術チーム向けのローカルファーストなオーケストレーション基盤です。統制されたWork Item、観測可能なLLMエージェントセッション、レガシーシステム近代化パイプライン、Windowsデスクトップシェル、ポートフォリオスナップショットを統合します。",
+          stack: ["ローカルファースト", "LLMエージェント", "レガシー近代化"],
+          isCurrent: true,
+        },
+        {
+          id: "municipal",
+          title: "ブラジル自治体再編モデリング",
+          description:
+            "Pythonと公共データパイプラインを用いて、ブラジルの自治体再編を支援するシナリオモデリングと領域分析を行います。",
+          stack: ["Python", "地理空間データ", "自動レポート"],
         },
         {
           id: "portal",
-          domain: "portal.hexglyph.com",
-          title: "Portal Municipal Inteligente",
+          title: "自治体インテリジェンスポータル",
           description:
-            "Portal unificado para prefeituras com buscas inteligentes, assistentes de IA e bancos vetoriais para revelar insights estratégicos.",
-          stack: ["Next.js", "Assistentes de IA", "Busca vetorial"],
+            "AIアシスタントとベクトルデータベースによる高度な検索で、自治体向けに戦略的インサイトを可視化する統合ポータルです。",
+          stack: ["Next.js", "AIアシスタント", "ベクトル検索"],
         },
         {
           id: "vereadores",
-          domain: "vereadores.hexglyph.com.br",
-          title: "Hub de Dados de Vereadores",
+          title: "議員データハブ",
           description:
-            "Base centralizada sobre vereadores com IA integrada para descoberta, monitoramento e briefings personalizados.",
-          stack: ["Data lake", "Enriquecimento com IA", "Knowledge graph"],
+            "議員データを一元化し、AIによる発見、モニタリング、パーソナライズされたブリーフィングを支援します。",
+          stack: ["データレイク", "AIエンリッチメント", "ナレッジグラフ"],
         },
         {
           id: "precast",
-          domain: "precast.hexglyph.com",
-          title: "Suite de Gestão Urbana",
+          title: "都市運営スイート",
           description:
-            "Torre de controle operacional para gestão da cidade com dashboards, automatização de tarefas e indicadores preditivos.",
-          stack: ["Operações municipais", "Automação", "Analytics preditivo"],
+            "都市運営のためのコントロールタワーとして、ダッシュボード、タスク自動化、予測指標を提供します。",
+          stack: ["都市運営", "自動化", "予測分析"],
         },
         {
           id: "city",
-          domain: "city.hexglyph.com",
-          title: "Plataforma de Gamificação Cívica",
+          title: "市民参加ゲーミフィケーション基盤",
           description:
-            "Plataforma gamificada que incentiva cidadãos e equipes municipais a colaborarem por meio de missões, recompensas e ciclos contínuos de feedback.",
-          stack: ["Gamificação", "Engajamento cívico", "Mobile-first"],
+            "ミッション、報酬、継続的なフィードバックを通じて、市民と自治体チームの協働を促進するゲーミフィケーション基盤です。",
+          stack: ["ゲーミフィケーション", "市民参加", "モバイル優先"],
         },
       ],
     },
     cta: {
-      title: "Pronto para",
-      titleHighlight: "Inovar",
-      description:
-        "Vamos conversar sobre como a Hexglyph pode transformar seu negócio com tecnologia e inteligência artificial.",
-      button: "Iniciar Projeto",
+      title: "イノベーションを",
+      titleHighlight: "始めませんか",
+      description: "テクノロジーと人工知能で、Hexglyphがどのようにビジネスを変革できるかをご相談ください。",
+      button: "プロジェクトを始める",
     },
     footer: {
-      tagline: "Tecnologia • Inteligência Artificial • Inovação",
-      copyright: "© 2025 Hexglyph. Transformando ideias em realidade.",
+      tagline: "テクノロジー - 人工知能 - イノベーション",
+      copyright: "© 2025 Hexglyph. アイデアを現実に変える。",
       contact: "hex@hexglyph.com",
     },
   },
-}
+} as const
+
+export type Language = keyof typeof translations

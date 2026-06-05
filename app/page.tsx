@@ -10,6 +10,7 @@ import { useLanguage } from "@/hooks/use-language"
 import { translations } from "@/lib/translations"
 
 const projectIcons: Record<string, LucideIcon> = {
+  orquestra: Bot,
   municipal: Map,
   portal: Globe,
   vereadores: Users,
@@ -139,38 +140,32 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {t.projects.items.map((project) => {
               const Icon = projectIcons[project.id] ?? Globe
-              const projectUrl = project.domain.startsWith("http") ? project.domain : `https://${project.domain}`
+              const isCurrentProject = "isCurrent" in project && project.isCurrent
 
               return (
-                <a
-                  key={project.id}
-                  href={projectUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-50 rounded-xl"
-                >
-                  <Card className="bg-white border-gray-200 hover:shadow-xl transition-shadow h-full">
-                    <CardHeader>
-                      <div className="flex items-center justify-between">
-                        <Icon className="h-12 w-12 text-gray-700" />
+                <Card key={project.id} className="bg-white border-gray-200 hover:shadow-xl transition-shadow h-full">
+                  <CardHeader>
+                    <div className="flex items-center justify-between gap-4">
+                      <Icon className="h-12 w-12 shrink-0 text-gray-700" />
+                      {isCurrentProject ? (
                         <Badge variant="outline" className="text-gray-600 border-gray-200">
-                          {project.domain}
+                          {t.projects.currentLabel}
                         </Badge>
-                      </div>
-                      <CardTitle className="text-gray-900 text-xl mt-4">{project.title}</CardTitle>
-                      <CardDescription className="text-gray-600">{project.description}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="flex flex-wrap gap-2">
-                        {project.stack.map((item: string) => (
-                          <Badge key={item} variant="secondary" className="bg-gray-100 text-gray-700">
-                            {item}
-                          </Badge>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </a>
+                      ) : null}
+                    </div>
+                    <CardTitle className="text-gray-900 text-xl mt-4">{project.title}</CardTitle>
+                    <CardDescription className="text-gray-600">{project.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex flex-wrap gap-2">
+                      {project.stack.map((item) => (
+                        <Badge key={item} variant="secondary" className="bg-gray-100 text-gray-700">
+                          {item}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
               )
             })}
           </div>
@@ -189,7 +184,7 @@ export default function HomePage() {
                 <div className="flex items-center justify-between">
                   <Users className="h-12 w-12 text-gray-700" />
                   <Badge variant="secondary" className="bg-gray-100 text-gray-700">
-                    Destaque
+                    {t.products.featuredLabel}
                   </Badge>
                 </div>
                 <CardTitle className="text-gray-900 text-xl">{t.products.cem.title}</CardTitle>
@@ -197,9 +192,9 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">{t.products.cem.description}</p>
-                <ul className="text-sm text-gray-500 space-y-1">
+                <ul className="text-sm text-gray-500 space-y-1 list-disc pl-5">
                   {t.products.cem.features.map((feature, index) => (
-                    <li key={index}>• {feature}</li>
+                    <li key={index}>{feature}</li>
                   ))}
                 </ul>
               </CardContent>
@@ -213,9 +208,9 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">{t.products.research.description}</p>
-                <ul className="text-sm text-gray-500 space-y-1">
+                <ul className="text-sm text-gray-500 space-y-1 list-disc pl-5">
                   {t.products.research.features.map((feature, index) => (
-                    <li key={index}>• {feature}</li>
+                    <li key={index}>{feature}</li>
                   ))}
                 </ul>
               </CardContent>
@@ -229,9 +224,9 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">{t.products.custom.description}</p>
-                <ul className="text-sm text-gray-500 space-y-1">
+                <ul className="text-sm text-gray-500 space-y-1 list-disc pl-5">
                   {t.products.custom.features.map((feature, index) => (
-                    <li key={index}>• {feature}</li>
+                    <li key={index}>{feature}</li>
                   ))}
                 </ul>
               </CardContent>

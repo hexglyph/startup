@@ -1,12 +1,12 @@
-import type { Metadata } from 'next'
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
-import './globals.css'
+import type { Metadata } from "next"
+import { GeistSans } from "geist/font/sans"
+import { GeistMono } from "geist/font/mono"
+import "./globals.css"
 
 export const metadata: Metadata = {
-  title: 'Hexglyph - Soluções de Software',
-  description: 'Desenvolvimento de software sob medida para atender às necessidades.',
-  generator: 'v1.1.0',
+  title: "Hexglyph - Software Solutions",
+  description: "Custom software development and artificial intelligence solutions.",
+  generator: "v1.1.0",
 }
 
 export default function RootLayout({
@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="en">
       <head>
         <style>{`
 html {
