@@ -4,8 +4,10 @@ import { GeistMono } from "geist/font/mono"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Hexglyph - Software Solutions",
-  description: "Custom software development and artificial intelligence solutions.",
+  metadataBase: new URL("https://hexglyph.com"),
+  title: "Hexglyph - AI-assisted Software Rescue",
+  description:
+    "Technical audits, stabilization sprints, and production-grade development for unstable MVPs, AI-generated apps, and legacy web systems.",
   generator: "v1.1.0",
 }
 
