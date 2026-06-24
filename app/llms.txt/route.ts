@@ -9,6 +9,9 @@ const body = `# Hexglyph
 - https://hexglyph.com/ai-app-stabilization
 - https://hexglyph.com/technical-audit
 - https://hexglyph.com/legacy-modernization
+- https://hexglyph.com/mvp-rescue
+- https://hexglyph.com/cursor-code-cleanup
+- https://hexglyph.com/nextjs-performance
 
 ## Services
 - AI app stabilization for Lovable, Bolt.new, v0, and Cursor-generated apps
@@ -16,6 +19,8 @@ const body = `# Hexglyph
 - Technical audit service for existing codebases, paid discovery, and implementation planning
 - React and Next.js performance, accessibility, and production hardening
 - Legacy web system rescue and modernization
+- MVP rescue for unstable startup products near launch
+- Cursor code cleanup and AI-generated code refactoring
 
 ## Contact
 - Email: hex@hexglyph.com

@@ -35,11 +35,20 @@ export const metadata: Metadata = {
     url: pageUrl,
     siteName: "Hexglyph",
     type: "website",
+    images: [
+      {
+        url: "/og-ai-app-stabilization.svg",
+        width: 1200,
+        height: 630,
+        alt: "AI app stabilization for Lovable, Bolt.new, v0 and Cursor apps",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
+    images: ["/og-ai-app-stabilization.svg"],
   },
 }
 

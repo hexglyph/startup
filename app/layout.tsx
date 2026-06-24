@@ -42,8 +42,10 @@ export const metadata: Metadata = {
     description: defaultDescription,
     images: [
       {
-        url: "/hexglyph-logo.png",
-        alt: "Hexglyph logo",
+        url: "/og-home.svg",
+        width: 1200,
+        height: 630,
+        alt: "Hexglyph technical audits and AI app stabilization",
       },
     ],
   },
@@ -51,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: defaultTitle,
     description: defaultDescription,
-    images: ["/hexglyph-logo.png"],
+    images: ["/og-home.svg"],
   },
   robots: {
     index: true,

@@ -97,9 +97,19 @@ const discoverItems = [
     description: "Service page for internal tools and aging systems that need safer refactoring without a rewrite-first approach.",
   },
   {
-    href: "#packages",
-    title: "Stabilization packages",
-    description: "See the audit, sprint, and implementation offers with entry pricing and scope framing.",
+    href: "/mvp-rescue",
+    title: "MVP rescue",
+    description: "Launch-focused service page for unstable startup products that need bug fixing and production hardening.",
+  },
+  {
+    href: "/cursor-code-cleanup",
+    title: "Cursor code cleanup",
+    description: "Entry page for refactoring AI-generated code, reducing duplication, and cleaning up fragile architecture.",
+  },
+  {
+    href: "/nextjs-performance",
+    title: "Next.js performance",
+    description: "Dedicated page for slow pages, weak Core Web Vitals, and React or Next.js optimization work.",
   },
 ]
 
@@ -113,10 +123,19 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     url: siteUrl,
+    images: [
+      {
+        url: "/og-home.svg",
+        width: 1200,
+        height: 630,
+        alt: "Hexglyph technical audits and AI app stabilization",
+      },
+    ],
   },
   twitter: {
     title: pageTitle,
     description: pageDescription,
+    images: ["/og-home.svg"],
   },
 }
 
@@ -454,7 +473,7 @@ export default function HomePage() {
             title="Clear entry points for search engines, AI crawlers, and buyers"
             description="Important pages should be easy to discover, internally linked, and explicit about what they cover."
           />
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {discoverItems.map((item) => (
               <Link
                 key={item.href}
@@ -546,6 +565,15 @@ export default function HomePage() {
               </Link>
               <Link href="/legacy-modernization" className="transition-colors hover:text-white">
                 Legacy Modernization
+              </Link>
+              <Link href="/mvp-rescue" className="transition-colors hover:text-white">
+                MVP Rescue
+              </Link>
+              <Link href="/cursor-code-cleanup" className="transition-colors hover:text-white">
+                Cursor Cleanup
+              </Link>
+              <Link href="/nextjs-performance" className="transition-colors hover:text-white">
+                Next.js Performance
               </Link>
               <a href="#services" className="transition-colors hover:text-white">
                 Services

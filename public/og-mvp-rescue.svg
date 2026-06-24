@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#060607"/>
+  <g opacity=".28" filter="url(#a)"><circle cx="188" cy="118" r="170" fill="#885CFF"/></g>
+  <path d="M0 0h1200v630H0z" fill="url(#b)"/><path d="M0 0h1200v630H0z" stroke="url(#c)" stroke-width="2"/>
+  <rect x="68" y="72" width="214" height="42" rx="21" fill="rgba(255,255,255,.04)" stroke="rgba(183,153,255,.24)"/>
+  <text x="175" y="98" text-anchor="middle" fill="#CDBDFF" font-family="Arial,sans-serif" font-size="16" letter-spacing="3">MVP RESCUE</text>
+  <text x="68" y="190" fill="#F8F8F3" font-family="Georgia,serif" font-size="62">Rescue an unstable MVP before</text>
+  <text x="68" y="258" fill="#F8F8F3" font-family="Georgia,serif" font-size="62">launch, demos, or investor scrutiny</text>
+  <text x="68" y="326" fill="#F8F8F3" font-family="Georgia,serif" font-size="62">make the problems visible.</text>
+  <text x="68" y="400" fill="#B4B4BC" font-family="Arial,sans-serif" font-size="28">Bug fixes, launch-blocker review, production hardening, and a clear path</text>
+  <text x="68" y="438" fill="#B4B4BC" font-family="Arial,sans-serif" font-size="28">to ship an MVP without guessing what breaks next.</text>
+  <rect x="818" y="58" width="286" height="286" rx="28" fill="rgba(255,255,255,.02)" stroke="rgba(183,153,255,.22)"/>
+  <rect x="850" y="194" width="222" height="118" rx="18" fill="#14141A" stroke="rgba(183,153,255,.18)"/>
+  <text x="872" y="230" fill="#9CA3AF" font-family="Arial,sans-serif" font-size="14" letter-spacing="2">DELIVERY MAP</text>
+  <text x="872" y="262" fill="#D4D4D8" font-family="Arial,sans-serif" font-size="18">Launch blockers</text>
+  <text x="1048" y="262" fill="#F8F8F3" font-family="Georgia,serif" font-size="18" text-anchor="end">Visible</text>
+  <text x="872" y="290" fill="#D4D4D8" font-family="Arial,sans-serif" font-size="18">Bug risk</text>
+  <text x="1048" y="290" fill="#F8F8F3" font-family="Georgia,serif" font-size="18" text-anchor="end">Ranked</text>
+  <text x="872" y="318" fill="#D4D4D8" font-family="Arial,sans-serif" font-size="18">Release plan</text>
+  <text x="1048" y="318" fill="#F8F8F3" font-family="Georgia,serif" font-size="18" text-anchor="end">Clear</text>
+  <defs><filter id="a" x="-82" y="-152" width="540" height="540" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="50"/></filter><pattern id="b" width="54" height="54" patternUnits="userSpaceOnUse"><path d="M54 0H0V54" stroke="rgba(255,255,255,.05)"/></pattern><linearGradient id="c" x1="0" y1="0" x2="0" y2="630" gradientUnits="userSpaceOnUse"><stop stop-color="rgba(255,255,255,.12)"/><stop offset="1" stop-color="rgba(255,255,255,0)"/></linearGradient></defs>
+</svg>

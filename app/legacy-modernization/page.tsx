@@ -32,11 +32,20 @@ export const metadata: Metadata = {
     url: pageUrl,
     siteName: "Hexglyph",
     type: "website",
+    images: [
+      {
+        url: "/og-legacy-modernization.svg",
+        width: 1200,
+        height: 630,
+        alt: "Legacy system modernization for internal tools and aging web apps",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
+    images: ["/og-legacy-modernization.svg"],
   },
 }
 
