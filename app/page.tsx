@@ -26,10 +26,16 @@ import {
   Wrench,
 } from "lucide-react"
 import type { LucideIcon } from "lucide-react"
+import type { Metadata } from "next"
 import Image from "next/image"
+import Link from "next/link"
 
 const t = translations.en
+const siteUrl = "https://hexglyph.com"
 const auditHref = `mailto:${t.footer.contact}?subject=Technical%20Audit%20Request`
+const pageTitle = "Technical Audits and AI App Stabilization"
+const pageDescription =
+  "Technical audits, stabilization sprints, and production-grade engineering for unstable MVPs, AI-generated apps, and legacy web systems."
 
 const navItems = [
   { href: "/ai-app-stabilization", label: t.nav.aiAppStabilization },
@@ -74,6 +80,90 @@ const workspaceItems = [
   { label: "Handoff", value: "Draft" },
 ]
 
+const discoverItems = [
+  {
+    href: "/ai-app-stabilization",
+    title: "AI app stabilization",
+    description: "Dedicated page for Lovable, Bolt.new, v0, and Cursor-generated apps that need production engineering.",
+  },
+  {
+    href: "/technical-audit",
+    title: "Technical audit service",
+    description: "Entry page for codebase audits, risk maps, implementation planning, and production-readiness reviews.",
+  },
+  {
+    href: "/legacy-modernization",
+    title: "Legacy modernization",
+    description: "Service page for internal tools and aging systems that need safer refactoring without a rewrite-first approach.",
+  },
+  {
+    href: "#packages",
+    title: "Stabilization packages",
+    description: "See the audit, sprint, and implementation offers with entry pricing and scope framing.",
+  },
+]
+
+export const metadata: Metadata = {
+  title: pageTitle,
+  description: pageDescription,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    url: siteUrl,
+  },
+  twitter: {
+    title: pageTitle,
+    description: pageDescription,
+  },
+}
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Hexglyph",
+    url: siteUrl,
+    email: t.footer.contact,
+    logo: `${siteUrl}/hexglyph-logo.png`,
+    description: pageDescription,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Hexglyph",
+    url: siteUrl,
+    description: pageDescription,
+    areaServed: "Worldwide",
+    serviceType: [
+      "Technical audit",
+      "AI app stabilization",
+      "Software rescue",
+      "Legacy modernization",
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Hexglyph",
+    url: siteUrl,
+    inLanguage: "en",
+  },
+]
+
+function JsonLd() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(schema).replace(/</g, "\\u003c"),
+      }}
+    />
+  )
+}
+
 function SectionIntro({
   eyebrow,
   title,
@@ -108,10 +198,11 @@ function SectionIntro({
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-[#060607] text-white">
+      <JsonLd />
       <header className="sticky top-0 z-50 border-b border-white/[0.08] bg-[#060607]/85 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
           <a href="#top" className="flex items-center gap-3" aria-label="Hexglyph home">
-            <Image src="/hexglyph-logo.png" alt="" width={34} height={34} className="rounded-md" priority />
+            <Image src="/hexglyph-logo.png" alt="Hexglyph logo" width={34} height={34} className="rounded-md" priority />
             <span className="text-lg font-medium text-white">Hexglyph</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm text-zinc-400 md:flex">
@@ -180,7 +271,7 @@ export default function HomePage() {
                 <div className="flex flex-col gap-4 border-b border-white/[0.08] p-5 md:flex-row md:items-center md:justify-between">
                   <div>
                     <p className="text-sm text-violet-300">{t.hero.panel.eyebrow}</p>
-                    <h2 className="mt-1 text-2xl font-medium text-white">{t.hero.panel.title}</h2>
+                    <p className="mt-1 text-2xl font-medium text-white">{t.hero.panel.title}</p>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {t.hero.proofPoints.map((point) => (
@@ -224,7 +315,11 @@ export default function HomePage() {
             </div>
 
             <p className="border-t border-white/[0.08] bg-white/[0.025] px-5 py-4 text-sm leading-6 text-zinc-400">
-              {t.hero.positioning}
+              {t.hero.positioning}{" "}
+              <Link href="/ai-app-stabilization" className="text-white underline decoration-white/30 underline-offset-4 transition-colors hover:text-violet-200">
+                Explore the dedicated AI app stabilization page
+              </Link>
+              .
             </p>
           </div>
         </div>
@@ -352,6 +447,28 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="border-b border-white/[0.08] px-4 py-24">
+        <div className="mx-auto max-w-7xl">
+          <SectionIntro
+            eyebrow="Site discovery"
+            title="Clear entry points for search engines, AI crawlers, and buyers"
+            description="Important pages should be easy to discover, internally linked, and explicit about what they cover."
+          />
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {discoverItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="rounded-lg border border-white/[0.10] bg-white/[0.035] p-6 transition-colors hover:border-violet-300/40 hover:bg-white/[0.05]"
+              >
+                <p className="text-lg font-medium text-white">{item.title}</p>
+                <p className="mt-3 text-sm leading-6 text-zinc-400">{item.description}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#f7f7f2] px-4 py-24 text-zinc-950">
         <div className="mx-auto max-w-7xl">
           <SectionIntro {...t.standards} tone="light" />
@@ -413,15 +530,34 @@ export default function HomePage() {
       <footer className="border-t border-white/[0.08] px-4 py-10">
         <div className="mx-auto flex max-w-7xl flex-col gap-5 md:flex-row md:items-center md:justify-between">
           <div className="flex items-center gap-3">
-            <Image src="/hexglyph-logo.png" alt="" width={30} height={30} className="rounded-md" />
+            <Image src="/hexglyph-logo.png" alt="Hexglyph logo" width={30} height={30} className="rounded-md" />
             <div>
               <p className="font-medium text-white">Hexglyph</p>
               <p className="text-sm text-zinc-500">{t.footer.tagline}</p>
             </div>
           </div>
-          <div className="text-sm text-zinc-500 md:text-right">
-            <p>{t.footer.contact}</p>
-            <p className="mt-1">{t.footer.copyright}</p>
+          <div className="flex flex-col gap-4 text-sm text-zinc-500 md:items-end">
+            <nav className="flex flex-wrap gap-4 text-zinc-400">
+              <Link href="/ai-app-stabilization" className="transition-colors hover:text-white">
+                AI App Stabilization
+              </Link>
+              <Link href="/technical-audit" className="transition-colors hover:text-white">
+                Technical Audit
+              </Link>
+              <Link href="/legacy-modernization" className="transition-colors hover:text-white">
+                Legacy Modernization
+              </Link>
+              <a href="#services" className="transition-colors hover:text-white">
+                Services
+              </a>
+              <a href="/llms.txt" className="transition-colors hover:text-white">
+                llms.txt
+              </a>
+            </nav>
+            <div className="md:text-right">
+              <p>{t.footer.contact}</p>
+              <p className="mt-1">{t.footer.copyright}</p>
+            </div>
           </div>
         </div>
       </footer>
