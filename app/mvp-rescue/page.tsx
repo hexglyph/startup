@@ -52,11 +52,11 @@ export default function MvpRescuePage() {
   return (
     <ServiceLandingPage
       badge="MVP rescue"
-      title="Rescue an unstable MVP before launch, demos, or investor scrutiny make the problems visible."
+      title="Stabilize an unstable MVP before launch, demos, or broader user exposure."
       description={description}
       pageUrl={pageUrl}
       auditHref={auditHref}
-      introNote="This page targets buyers searching MVP rescue, unstable MVP fixes, startup app rescue, pre-launch bug fixing, and production-readiness help."
+      introNote="Main indexing terms: MVP rescue, unstable MVP fixes, startup app rescue, pre-launch bug fixing, and production-readiness review."
       heroStats={[
         { label: "Launch blockers", value: "Visible" },
         { label: "Bug risk", value: "Ranked" },
@@ -67,7 +67,7 @@ export default function MvpRescuePage() {
       symptomDescription="Early products usually fail in the same places: fragile auth, weak validation, broken flows, rushed architecture, and no confidence about what breaks under real usage."
       symptoms={[
         {
-          title: "The demo worked, the real product does not",
+          title: "Prototype behavior does not hold up in production use",
           description: "Once real users, real data, or real transactions arrive, the MVP exposes reliability gaps that were hidden in prototype mode.",
         },
         {
@@ -84,7 +84,7 @@ export default function MvpRescuePage() {
         },
       ]}
       deliverablesTitle="Rescue scope"
-      deliverablesDescription="The work is designed to move an MVP from unstable and ambiguous to launchable and understandable, without pretending the only answer is a full rebuild."
+      deliverablesDescription="The work is structured to reduce launch risk, clarify open issues, and define the implementation work needed before release."
       deliverables={[
         "Technical audit focused on launch blockers",
         "Severity-ranked bug and reliability backlog",
@@ -95,23 +95,23 @@ export default function MvpRescuePage() {
         "Performance and UX issues that hurt first impressions",
         "A practical sprint plan to stabilize before launch",
       ]}
-      valuesTitle="Launch clarity matters more than another feature."
-      valuesDescription="Founders usually do not need more surface area first. They need to know what is brittle, what is launch-critical, and how to stabilize without losing momentum."
+      valuesTitle="What the rescue phase should produce."
+      valuesDescription="The rescue phase should show what is brittle, what is launch-critical, and how to stabilize the product while keeping delivery moving."
       values={[
         {
-          title: "Faster clarity",
-          description: "The rescue process compresses uncertainty so launch decisions are based on visible engineering risk instead of guesswork.",
+          title: "Visible launch risk",
+          description: "The rescue process makes launch decisions easier by showing the engineering risks, their severity, and the order to address them.",
         },
         {
           title: "Less wasted build effort",
-          description: "Instead of piling features onto fragile code, the team gets a ranked path for the fixes that actually protect the launch.",
+          description: "The team gets a ranked path for the fixes that protect the launch and reduce regression risk.",
         },
         {
-          title: "Better founder confidence",
-          description: "The product becomes easier to explain to investors, partners, and internal stakeholders because the risks and fixes are explicit.",
+          title: "Shared status view",
+          description: "The product status becomes easier to explain to investors, partners, and internal stakeholders because the risks and fixes are explicit.",
         },
         {
-          title: "Safer post-launch growth",
+          title: "Cleaner post-launch backlog",
           description: "A rescued MVP is easier to extend after launch because the worst fragility has already been identified and addressed.",
         },
       ]}
@@ -156,7 +156,7 @@ export default function MvpRescuePage() {
         {
           question: "Do you recommend a full rewrite for unstable MVPs?",
           answer:
-            "Not by default. Most unstable MVPs benefit more from risk-ranked rescue and targeted stabilization than from a rewrite-first decision made under pressure.",
+            "In many cases, an unstable MVP responds better to targeted rescue and stabilization work than to a rushed full rewrite decision.",
         },
         {
           question: "Can rescue work continue into implementation?",
@@ -178,11 +178,11 @@ export default function MvpRescuePage() {
         {
           href: "/legacy-modernization",
           title: "Legacy modernization",
-          description: "For older systems and internal tools that need controlled refactoring without a rewrite-first approach.",
+          description: "For older systems and internal tools that need controlled refactoring, safer operations, and clearer modernization scope.",
         },
       ]}
-      contactTitle="Need to rescue an MVP before launch pressure turns into public failure?"
-      contactDescription="Send the product context, current launch concerns, and the parts that already feel brittle. Hexglyph can turn that into a focused rescue plan."
+      contactTitle="Need technical review or implementation work on an unstable MVP?"
+      contactDescription="Send the product context, current launch concerns, and the parts that already feel brittle to start with a focused audit."
     />
   )
 }

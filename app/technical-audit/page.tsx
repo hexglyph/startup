@@ -57,7 +57,7 @@ export default function TechnicalAuditPage() {
       description={description}
       pageUrl={pageUrl}
       auditHref={auditHref}
-      introNote="This page targets buyers looking for codebase audits, risk-ranked implementation plans, architecture review, production-readiness assessment, and paid technical discovery."
+      introNote="Main indexing terms: codebase audit, software audit, architecture review, production-readiness assessment, and technical discovery."
       heroStats={[
         { label: "Architecture", value: "Mapped" },
         { label: "Critical risks", value: "Ranked" },
@@ -85,7 +85,7 @@ export default function TechnicalAuditPage() {
         },
       ]}
       deliverablesTitle="Audit deliverables"
-      deliverablesDescription="The output is not vague consulting language. It is a practical decision package that helps you choose whether to stabilize, refactor, or change scope."
+      deliverablesDescription="The output is a practical decision package that helps you choose scope, order, and implementation priorities with less ambiguity."
       deliverables={[
         "Architecture review with clear risk notes",
         "Severity-ranked bug and delivery blocker list",
@@ -96,8 +96,8 @@ export default function TechnicalAuditPage() {
         "Scope guidance for the first stabilization sprint",
         "Written handoff that another engineer can actually use",
       ]}
-      valuesTitle="Why a paid audit works better than guessing."
-      valuesDescription="The goal is to compress uncertainty. Buyers need a usable implementation plan, not a generic report that says everything matters equally."
+      valuesTitle="What the audit is meant to provide."
+      valuesDescription="The audit reduces uncertainty and produces an implementation plan with clearer priorities, tradeoffs, and next steps."
       values={[
         {
           title: "Independent diagnosis",
@@ -112,8 +112,8 @@ export default function TechnicalAuditPage() {
           description: "Findings are organized so they can become backlog items, sprint scope, and delivery decisions immediately.",
         },
         {
-          title: "Better buyer confidence",
-          description: "Founders, partners, or clients can see what is broken, what is urgent, and what the next engineering step should be.",
+          title: "Shared working view",
+          description: "Founders, partners, or internal teams can see what is broken, what is urgent, and what the next engineering step should be.",
         },
       ]}
       process={[
@@ -183,7 +183,7 @@ export default function TechnicalAuditPage() {
           description: "See packages, case studies, and the broader software rescue positioning.",
         },
       ]}
-      contactTitle="Need a risk-ranked technical audit for an existing codebase?"
+      contactTitle="Need a technical audit for an existing codebase?"
       contactDescription="Send the repository context, deployment target, and the decisions you are stuck on. Hexglyph can turn that into a clear diagnosis and next-step plan."
     />
   )

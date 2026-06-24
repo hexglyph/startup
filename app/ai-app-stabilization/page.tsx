@@ -56,11 +56,11 @@ export default function AiAppStabilizationPage() {
   return (
     <ServiceLandingPage
       badge="AI-generated app stabilization"
-      title="Fix your AI-generated app before users see it break."
+      title="Stabilize your AI-generated app for real users, real data, and production delivery."
       description={description}
       pageUrl={pageUrl}
       auditHref={auditHref}
-      introNote="Search intent match: AI generated app, Lovable app, Bolt.new app, v0 app, Cursor generated code, MVP needs fixing, React app bugs, Next.js app performance, codebase cleanup, technical audit."
+      introNote="Main indexing terms: AI generated app, Lovable app, Bolt.new app, v0 app, Cursor generated code, React app bugs, Next.js app performance, codebase cleanup, technical audit."
       heroStats={[
         { label: "Generated UI", value: "Needs validation" },
         { label: "Auth flow", value: "High risk" },
@@ -88,7 +88,7 @@ export default function AiAppStabilizationPage() {
         },
       ]}
       deliverablesTitle="Technical audit"
-      deliverablesDescription="A Hexglyph technical audit gives founders and agencies a direct answer: what is broken, what is risky, what should be refactored, and what must be fixed before launch."
+      deliverablesDescription="The audit identifies failure points, dependency risks, refactor candidates, and the order of implementation work."
       deliverables={[
         "Fix unstable app behavior and launch-blocking bugs",
         "Clean up Cursor-generated code and duplicated components",
@@ -99,7 +99,7 @@ export default function AiAppStabilizationPage() {
         "Review authentication, authorization, and data access risks",
         "Create a technical audit with severity, effort, and recommended order",
       ]}
-      valuesTitle="Senior full-stack developer judgment, not just another prompt."
+      valuesTitle="Senior full-stack developer judgment for generated apps under production pressure."
       valuesDescription="The work combines AI-assisted analysis with human engineering decisions across architecture, UX, security, performance, and deployment."
       values={[
         {
@@ -188,8 +188,8 @@ export default function AiAppStabilizationPage() {
           description: "Overview of stabilization packages, case studies, and the broader service offer.",
         },
       ]}
-      contactTitle="Need a senior full-stack developer to fix an unstable AI app?"
-      contactDescription="Send the repository context and current issues. Hexglyph can start with a focused technical audit before you spend more money on feature work."
+      contactTitle="Need technical review or implementation support for an unstable AI app?"
+      contactDescription="Send the repository context and current issues to start with a technical audit or a scoped implementation sprint."
     />
   )
 }

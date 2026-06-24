@@ -9,18 +9,18 @@ export const translations = {
       contact: "Contact",
     },
     hero: {
-      eyebrow: "AI-assisted software rescue",
-      title: "Rescue unstable software. Ship production-ready systems faster.",
+      eyebrow: "Technical audits and stabilization",
+      title: "Technical audits, stabilization sprints, and implementation for existing software.",
       description:
-        "Hexglyph helps founders, agencies, and small teams stabilize AI-generated apps, fragile MVPs, and legacy web systems with senior full-stack engineering, AI-assisted analysis, and production-grade delivery.",
+        "Hexglyph works on AI-generated apps, unstable MVPs, and legacy web systems that need technical review, refactoring, and implementation support.",
       primaryCta: "Get a Technical Audit",
       secondaryCta: "See Stabilization Packages",
       positioning:
-        "Ideal for Lovable, Bolt, v0, Cursor-generated projects, unstable MVPs, legacy internal tools, and React/Next.js applications that need senior engineering before launch.",
-      proofPoints: ["Senior full-stack delivery", "AI-assisted codebase analysis", "Production handoff"],
+        "Typical engagements include Lovable, Bolt, v0, and Cursor-generated projects, unstable MVPs, legacy internal tools, and React or Next.js applications.",
+      proofPoints: ["Technical review", "Implementation sprint", "Handoff notes"],
       panel: {
         eyebrow: "Technical audit snapshot",
-        title: "From fragile build to release plan",
+        title: "Current state and next steps",
         items: [
           {
             label: "Code maintainability",
@@ -48,9 +48,9 @@ export const translations = {
     },
     services: {
       eyebrow: "What we fix",
-      title: "Focused on systems that already exist, but are not ready for users",
+      title: "For systems that already exist and still need engineering work",
       description:
-        "The offer is built for clients who already spent time or money on software and need a clear path from unstable code to a maintainable production system.",
+        "The work is structured for clients who already have software in place and need technical review, correction, or implementation help.",
       items: [
         {
           id: "generated",
@@ -81,9 +81,9 @@ export const translations = {
     },
     packages: {
       eyebrow: "Stabilization packages",
-      title: "Start with diagnosis, then move into a focused delivery sprint",
+      title: "Start with review, then move into implementation",
       description:
-        "Clear entry points make it easier for international clients from Upwork, Freelancer, or direct outreach to understand scope, price, and next steps.",
+        "The service is split into review and implementation stages so scope and budget are easier to define.",
       items: [
         {
           id: "audit",
@@ -173,9 +173,9 @@ export const translations = {
     },
     process: {
       eyebrow: "How it works",
-      title: "A practical route from unclear risk to shippable software",
+      title: "A working sequence from review to implementation",
       description:
-        "The process is built for remote clients who need confidence, written decisions, and visible progress before committing to a larger build.",
+        "The sequence is designed for remote work with written decisions, explicit scope, and staged implementation.",
       steps: [
         {
           title: "Technical Intake",
@@ -201,9 +201,9 @@ export const translations = {
     },
     standards: {
       eyebrow: "Built with production standards",
-      title: "Modern web, AI, and delivery practices without vague consulting language",
+      title: "Technical stack and delivery scope",
       description:
-        "The technical stack is presented as trust evidence for buyers who need senior execution, not just broad software promises.",
+        "These are the main technologies and delivery concerns covered in typical engagements.",
       groups: [
         {
           id: "frontend",
@@ -231,12 +231,12 @@ export const translations = {
       eyebrow: "Next step",
       title: "Have an unstable app or MVP?",
       description:
-        "Send it for a technical audit and get a clear diagnosis before spending more money on development.",
+        "Send the repository and current issues to start with a technical audit or scoped implementation sprint.",
       primary: "Request Audit",
       secondary: "Contact by Email",
     },
     footer: {
-      tagline: "AI-assisted software rescue, stabilization, and production-grade development.",
+      tagline: "Technical audits, stabilization, and implementation for existing software.",
       copyright: "(c) 2026 Hexglyph. Production-ready software for international clients.",
       contact: "hex@hexglyph.com",
     },

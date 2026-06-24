@@ -5,9 +5,9 @@ import "./globals.css"
 
 const siteUrl = "https://hexglyph.com"
 const siteName = "Hexglyph"
-const defaultTitle = "Hexglyph | AI-assisted Software Rescue"
+const defaultTitle = "Hexglyph | Technical Audits and Software Stabilization"
 const defaultDescription =
-  "Technical audits, stabilization sprints, and production-grade development for unstable MVPs, AI-generated apps, and legacy web systems."
+  "Technical audits, stabilization sprints, and implementation work for unstable MVPs, AI-generated apps, and legacy web systems."
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   keywords: [
     "AI app stabilization",
     "technical audit",
-    "software rescue",
+    "software stabilization",
     "unstable MVP",
     "Next.js consulting",
     "React performance",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         url: "/og-home.svg",
         width: 1200,
         height: 630,
-        alt: "Hexglyph technical audits and AI app stabilization",
+        alt: "Hexglyph technical audits and software stabilization",
       },
     ],
   },

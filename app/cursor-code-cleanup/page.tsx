@@ -51,11 +51,11 @@ export default function CursorCodeCleanupPage() {
   return (
     <ServiceLandingPage
       badge="Cursor code cleanup"
-      title="Clean up AI-generated code before it turns useful velocity into long-term drag."
+      title="Clean up AI-generated code so the codebase stays maintainable as the product grows."
       description={description}
       pageUrl={pageUrl}
       auditHref={auditHref}
-      introNote="This page targets buyers searching Cursor code cleanup, AI-generated code refactoring, codebase cleanup service, and help fixing generated code before it compounds technical debt."
+      introNote="Main indexing terms: Cursor code cleanup, AI-generated code refactoring, codebase cleanup service, and generated code maintenance."
       heroStats={[
         { label: "Duplication", value: "Reduced" },
         { label: "Structure", value: "Clarified" },
@@ -83,7 +83,7 @@ export default function CursorCodeCleanupPage() {
         },
       ]}
       deliverablesTitle="Cleanup scope"
-      deliverablesDescription="The goal is not cosmetic cleanup. The goal is to turn generated code into a codebase that humans can maintain, extend, and trust under production pressure."
+      deliverablesDescription="The work turns generated output into a codebase that a team can maintain, extend, and ship with more confidence."
       deliverables={[
         "Audit of generated-code structure and fragility",
         "Duplication and component consistency review",
@@ -95,10 +95,10 @@ export default function CursorCodeCleanupPage() {
         "A handoff-ready plan for continued development",
       ]}
       valuesTitle="Generated code still needs senior engineering judgment."
-      valuesDescription="Cleanup matters when the output has become useful enough to keep, but too messy to scale. The job is to preserve momentum while removing the structural drag."
+      valuesDescription="Cleanup is useful when generated output is already in use but the codebase structure is slowing down maintenance and extension."
       values={[
         {
-          title: "Preserve useful progress",
+          title: "Preserve current work",
           description: "The work keeps the valuable parts of generated output while reducing the patterns that will create repeated friction later.",
         },
         {
@@ -106,12 +106,12 @@ export default function CursorCodeCleanupPage() {
           description: "A cleaner structure means fewer regressions, less duplicated work, and faster iteration for the humans maintaining the code.",
         },
         {
-          title: "Improve team confidence",
-          description: "When the architecture and responsibilities become clearer, the codebase feels safer to touch and easier to hand off.",
+          title: "Improve team readability",
+          description: "When architecture and responsibilities become clearer, the codebase is easier to change and easier to hand off.",
         },
         {
-          title: "Make production delivery realistic",
-          description: "Cleanup is what turns a generated prototype into something the team can responsibly ship and improve.",
+          title: "Support ongoing delivery",
+          description: "Cleanup makes the codebase easier to ship, maintain, and extend under normal delivery pressure.",
         },
       ]}
       process={[
@@ -154,7 +154,7 @@ export default function CursorCodeCleanupPage() {
         {
           question: "Can cleanup happen without rewriting the app?",
           answer:
-            "Yes. The usual goal is targeted refactoring and structural cleanup that preserves useful work rather than replacing everything.",
+            "Yes. The usual goal is targeted refactoring and structural cleanup that keeps the useful work and improves the weakest parts first.",
         },
         {
           question: "Is this useful before launch?",
@@ -180,7 +180,7 @@ export default function CursorCodeCleanupPage() {
         },
       ]}
       contactTitle="Need to clean up AI-generated code before it slows every next decision?"
-      contactDescription="Send the repository context and the parts that already feel duplicated, fragile, or hard to extend. Hexglyph can turn that into a cleanup and refactor plan."
+      contactDescription="Send the repository context and the parts that already feel duplicated, fragile, or hard to extend to start with a cleanup and refactor plan."
     />
   )
 }

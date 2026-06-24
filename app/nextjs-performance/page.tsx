@@ -55,7 +55,7 @@ export default function NextjsPerformancePage() {
       description={description}
       pageUrl={pageUrl}
       auditHref={auditHref}
-      introNote="This page targets Next.js performance audit, React app optimization, Core Web Vitals consulting, and teams trying to fix slow pages before users drop or search visibility suffers."
+      introNote="Main indexing terms: Next.js performance audit, React app optimization, Core Web Vitals consulting, and frontend performance audit."
       heroStats={[
         { label: "Render path", value: "Analyzed" },
         { label: "Bundle weight", value: "Reduced" },
@@ -78,12 +78,12 @@ export default function NextjsPerformancePage() {
           description: "The site may be usable, but UX, discoverability, and conversion are weakened by unstable metrics and rough loading behavior.",
         },
         {
-          title: "The team is guessing at fixes",
+          title: "The team lacks a ranked view of the real bottlenecks",
           description: "People suspect caching, images, rendering mode, or component behavior, but there is no ranked performance diagnosis to guide effort.",
         },
       ]}
       deliverablesTitle="Performance scope"
-      deliverablesDescription="The audit focuses on the changes that actually move user-perceived speed and reliability, not just generic advice about optimizing everything."
+      deliverablesDescription="The audit focuses on the changes that most improve user-perceived speed, stability, and rendering efficiency."
       deliverables={[
         "Next.js rendering and route analysis",
         "Bundle and client-side weight review",
@@ -94,16 +94,16 @@ export default function NextjsPerformancePage() {
         "Prioritized performance backlog",
         "Implementation guidance for the highest-leverage fixes",
       ]}
-      valuesTitle="Performance work should be ranked, not scattered."
-      valuesDescription="Strong performance improvements come from knowing which constraints actually matter first, instead of making unfocused tweaks across the entire app."
+      valuesTitle="What the performance audit should provide."
+      valuesDescription="Performance work is more effective when the constraints are identified first and the implementation sequence is explicit."
       values={[
         {
           title: "Better perceived speed",
           description: "Users feel the improvement when the loading path, rendering behavior, and interaction cost are addressed intentionally.",
         },
         {
-          title: "Higher conversion confidence",
-          description: "Faster and cleaner pages reduce friction in the moments where trust, signups, and action-taking matter most.",
+          title: "Lower interaction friction",
+          description: "Faster and cleaner pages reduce friction in signup, navigation, and other interaction-heavy flows.",
         },
         {
           title: "Less wasted engineering effort",
@@ -157,7 +157,7 @@ export default function NextjsPerformancePage() {
             "Yes. The audit looks at React component patterns, state flow, rendering behavior, and the frontend decisions that drive user-perceived slowness.",
         },
         {
-          question: "Can performance work happen without a rewrite?",
+          question: "Can performance work happen through targeted improvements?",
           answer:
             "Yes. Most apps benefit more from ranked optimization and architectural correction than from throwing away the existing codebase.",
         },
@@ -179,7 +179,7 @@ export default function NextjsPerformancePage() {
           description: "For AI-generated apps that also need structure, cleanup, and production hardening.",
         },
       ]}
-      contactTitle="Need to fix a slow Next.js app without guessing where the real cost is?"
+      contactTitle="Need to fix a slow Next.js app with a clearer view of the main bottlenecks?"
       contactDescription="Send the route context, the slow flows, and any current metrics or complaints. Hexglyph can turn that into a ranked performance plan."
     />
   )

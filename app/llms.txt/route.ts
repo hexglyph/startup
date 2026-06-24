@@ -2,7 +2,7 @@ import { NextResponse } from "next/server"
 
 const body = `# Hexglyph
 
-> Hexglyph provides technical audits, stabilization sprints, and production-grade development for unstable MVPs, AI-generated apps, and legacy web systems.
+> Hexglyph provides technical audits, stabilization sprints, and implementation work for unstable MVPs, AI-generated apps, and legacy web systems.
 
 ## Canonical URLs
 - https://hexglyph.com/
@@ -18,7 +18,7 @@ const body = `# Hexglyph
 - Technical audits for unstable MVPs
 - Technical audit service for existing codebases, paid discovery, and implementation planning
 - React and Next.js performance, accessibility, and production hardening
-- Legacy web system rescue and modernization
+- Legacy web system modernization and maintenance work
 - MVP rescue for unstable startup products near launch
 - Cursor code cleanup and AI-generated code refactoring
 

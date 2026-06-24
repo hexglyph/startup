@@ -53,11 +53,11 @@ export default function LegacyModernizationPage() {
   return (
     <ServiceLandingPage
       badge="Legacy system modernization"
-      title="Modernize fragile internal tools and aging web apps without a reckless rewrite."
+      title="Modernize fragile internal tools and aging web apps with a phased, lower-risk delivery plan."
       description={description}
       pageUrl={pageUrl}
       auditHref={auditHref}
-      introNote="This page is built for buyers searching legacy system modernization, internal tool rescue, controlled refactoring, production hardening, and technical debt cleanup."
+      introNote="Main indexing terms: legacy system modernization, internal tool modernization, controlled refactoring, production hardening, and technical debt cleanup."
       heroStats={[
         { label: "Manual workflows", value: "Reduced" },
         { label: "Technical debt", value: "Mapped" },
@@ -97,7 +97,7 @@ export default function LegacyModernizationPage() {
         "Phased modernization plan without full rewrite assumptions",
       ]}
       valuesTitle="Modernization that respects the business constraint."
-      valuesDescription="The point is not to chase elegance for its own sake. The point is to make an aging system safer to operate, easier to change, and cheaper to extend."
+      valuesDescription="The work is designed to make an aging system safer to operate, easier to change, and cheaper to extend over time."
       values={[
         {
           title: "Controlled change",
@@ -105,7 +105,7 @@ export default function LegacyModernizationPage() {
         },
         {
           title: "Less wasted rebuild work",
-          description: "Useful logic is preserved where it should be, while fragile parts are isolated, cleaned up, or replaced intentionally.",
+          description: "Useful logic is preserved where it still serves the system, while fragile parts are isolated, cleaned up, or replaced intentionally.",
         },
         {
           title: "Clear modernization economics",
@@ -113,7 +113,7 @@ export default function LegacyModernizationPage() {
         },
         {
           title: "Operational resilience",
-          description: "The result is a tool or platform that fails less often, is easier to hand off, and supports future automation more reliably.",
+          description: "The result is a tool or platform with fewer operational failures, clearer ownership, and better support for future automation work.",
         },
       ]}
       process={[
@@ -182,7 +182,7 @@ export default function LegacyModernizationPage() {
           description: "Overview of software rescue, packages, and case-study framing.",
         },
       ]}
-      contactTitle="Need a safer modernization path for an aging internal system?"
+      contactTitle="Need a modernization plan for an aging internal system?"
       contactDescription="Send the system context, business dependency, and current failure modes. Hexglyph can map the risk and define a controlled modernization plan."
     />
   )

@@ -167,7 +167,7 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
       </header>
 
       <section className="relative overflow-hidden border-b border-white/[0.08] px-4 pb-20 pt-16 md:pb-28 md:pt-24">
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:68px_68px] [mask-image:linear-gradient(to_bottom,black,transparent_82%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.06),transparent_42%)] [mask-image:linear-gradient(to_bottom,black,transparent_82%)]" />
         <div className="pointer-events-none absolute left-0 top-0 h-80 w-80 rounded-full bg-emerald-300/10 blur-3xl" />
         <div className="pointer-events-none absolute inset-x-0 top-0 h-96 bg-[linear-gradient(180deg,rgba(75,180,160,0.18),rgba(6,6,7,0))]" />
 
@@ -201,8 +201,8 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
 
           <div className="overflow-hidden rounded-lg border border-white/[0.10] bg-[#0d0d10] shadow-[0_40px_120px_rgba(0,0,0,0.45)]">
             <div className="border-b border-white/[0.08] p-5">
-              <p className="text-sm text-emerald-300">Delivery map</p>
-              <p className="mt-1 text-2xl font-medium text-white">What gets clarified first</p>
+            <p className="text-sm text-emerald-300">Audit view</p>
+            <p className="mt-1 text-2xl font-medium text-white">Current working assumptions</p>
             </div>
             <div className="grid gap-px bg-white/[0.08] sm:grid-cols-2">
               {props.heroStats.map((item) => (
@@ -228,7 +228,7 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto mb-12 max-w-3xl text-center">
             <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-emerald-300">{props.symptomTitle}</p>
-            <h2 className="text-balance text-3xl font-medium text-white md:text-5xl">Where delivery starts to fail.</h2>
+            <h2 className="text-balance text-3xl font-medium text-white md:text-5xl">Common failure points.</h2>
             <p className="mt-5 text-lg leading-8 text-zinc-400">{props.symptomDescription}</p>
           </div>
 
@@ -276,7 +276,7 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
       <section className="px-4 py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto mb-12 max-w-3xl text-center">
-            <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-emerald-300">Why it converts</p>
+            <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-emerald-300">Working approach</p>
             <h2 className="text-balance text-3xl font-medium text-white md:text-5xl">{props.valuesTitle}</h2>
             <p className="mt-5 text-lg leading-8 text-zinc-400">{props.valuesDescription}</p>
           </div>
@@ -301,7 +301,7 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_420px]">
           <div>
             <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-emerald-300">Process</p>
-            <h2 className="text-balance text-3xl font-medium text-white md:text-5xl">Clear sequence, visible decisions, low ambiguity.</h2>
+            <h2 className="text-balance text-3xl font-medium text-white md:text-5xl">Sequence of work.</h2>
           </div>
           <div className="space-y-3">
             {props.process.map((item, index) => (
@@ -318,10 +318,10 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
       <section className="bg-[#f3efe6] px-4 py-24 text-zinc-950">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto mb-12 max-w-3xl text-center">
-            <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-emerald-800">Search language</p>
-            <h2 className="text-balance text-3xl font-medium md:text-5xl">Visible phrases buyers and answer engines both understand.</h2>
+            <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-emerald-800">Indexing language</p>
+            <h2 className="text-balance text-3xl font-medium md:text-5xl">Search terms used on the page.</h2>
             <p className="mt-5 text-lg leading-8 text-zinc-600">
-              The page keeps the language explicit so search engines, AI assistants, and human buyers all read the same offer.
+              These terms are present in visible copy so search systems can map the page to the service being offered.
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-2">
@@ -338,7 +338,7 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
             <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-emerald-300">FAQ</p>
-            <h2 className="text-balance text-3xl font-medium text-white md:text-5xl">Direct answers for qualified buyers.</h2>
+            <h2 className="text-balance text-3xl font-medium text-white md:text-5xl">Frequently asked questions.</h2>
           </div>
           <div className="space-y-3">
             {props.faqs.map((item) => (
@@ -354,8 +354,8 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
       <section className="border-y border-white/[0.08] px-4 py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
-            <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-emerald-300">Related entry points</p>
-            <h2 className="text-balance text-3xl font-medium text-white md:text-5xl">More pages for adjacent buying intent.</h2>
+            <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-emerald-300">Related pages</p>
+            <h2 className="text-balance text-3xl font-medium text-white md:text-5xl">Related service pages.</h2>
           </div>
           <div className="grid gap-4 lg:grid-cols-3">
             {props.relatedPages.map((item) => (

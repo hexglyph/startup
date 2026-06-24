@@ -94,7 +94,7 @@ const discoverItems = [
   {
     href: "/legacy-modernization",
     title: "Legacy modernization",
-    description: "Service page for internal tools and aging systems that need safer refactoring without a rewrite-first approach.",
+    description: "Service page for internal tools and aging systems that need controlled refactoring, production hardening, and clearer delivery.",
   },
   {
     href: "/mvp-rescue",
@@ -235,7 +235,7 @@ export default function HomePage() {
       </header>
 
       <section id="top" className="relative overflow-hidden border-b border-white/[0.08] px-4 pb-20 pt-16 md:pb-28 md:pt-24">
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.055)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.055)_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:linear-gradient(to_bottom,black,transparent_78%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.07),transparent_40%)] [mask-image:linear-gradient(to_bottom,black,transparent_78%)]" />
         <div className="pointer-events-none absolute inset-x-0 top-0 h-96 bg-[linear-gradient(180deg,rgba(124,92,255,0.18),rgba(6,6,7,0))]" />
 
         <div className="relative mx-auto max-w-7xl">
@@ -336,7 +336,7 @@ export default function HomePage() {
             <p className="border-t border-white/[0.08] bg-white/[0.025] px-5 py-4 text-sm leading-6 text-zinc-400">
               {t.hero.positioning}{" "}
               <Link href="/ai-app-stabilization" className="text-white underline decoration-white/30 underline-offset-4 transition-colors hover:text-violet-200">
-                Explore the dedicated AI app stabilization page
+                View the AI app stabilization page
               </Link>
               .
             </p>
@@ -469,9 +469,9 @@ export default function HomePage() {
       <section className="border-b border-white/[0.08] px-4 py-24">
         <div className="mx-auto max-w-7xl">
           <SectionIntro
-            eyebrow="Site discovery"
-            title="Clear entry points for search engines, AI crawlers, and buyers"
-            description="Important pages should be easy to discover, internally linked, and explicit about what they cover."
+            eyebrow="Service index"
+            title="Primary service pages"
+            description="These pages cover the main service lines and are linked directly from the homepage."
           />
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {discoverItems.map((item) => (
