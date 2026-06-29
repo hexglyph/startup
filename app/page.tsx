@@ -207,7 +207,7 @@ function SectionIntro({
       <h2 className={isDark ? "text-balance text-3xl font-medium text-white md:text-5xl" : "text-balance text-3xl font-medium text-zinc-950 md:text-5xl"}>
         {title}
       </h2>
-      <p className={isDark ? "mt-5 text-lg leading-8 text-zinc-400" : "mt-5 text-lg leading-8 text-zinc-600"}>
+      <p className={isDark ? "mt-5 text-lg leading-8 text-zinc-300" : "mt-5 text-lg leading-8 text-zinc-700"}>
         {description}
       </p>
     </div>
@@ -224,7 +224,7 @@ export default function HomePage() {
             <Image src="/hexglyph-logo.png" alt="Hexglyph logo" width={34} height={34} className="rounded-md" priority />
             <span className="text-lg font-medium text-white">Hexglyph</span>
           </a>
-          <nav className="hidden items-center gap-7 text-sm text-zinc-400 md:flex">
+          <nav className="hidden items-center gap-7 text-sm text-zinc-300 md:flex">
             {navItems.map((item) => (
               <a key={item.href} href={item.href} className="transition-colors hover:text-white">
                 {item.label}
@@ -246,7 +246,7 @@ export default function HomePage() {
             <h1 className="text-balance text-5xl font-medium leading-[1.02] tracking-normal text-white md:text-7xl">
               {t.hero.title}
             </h1>
-            <p className="mx-auto mt-7 max-w-3xl text-xl leading-9 text-zinc-400">{t.hero.description}</p>
+            <p className="mx-auto mt-7 max-w-3xl text-xl leading-9 text-zinc-300">{t.hero.description}</p>
             <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
               <Button asChild size="lg" className="bg-white text-zinc-950 hover:bg-zinc-200">
                 <a href={auditHref}>
@@ -274,15 +274,15 @@ export default function HomePage() {
                 </div>
                 <div className="space-y-1">
                   {workspaceItems.map((item) => (
-                    <div key={item.label} className="flex items-center justify-between rounded-md px-3 py-2 text-sm text-zinc-400">
+                    <div key={item.label} className="flex items-center justify-between rounded-md px-3 py-2 text-sm text-zinc-300">
                       <span>{item.label}</span>
-                      <span className="text-xs text-zinc-500">{item.value}</span>
+                      <span className="text-xs text-zinc-300">{item.value}</span>
                     </div>
                   ))}
                 </div>
                 <div className="mt-6 rounded-md border border-white/[0.08] bg-black/25 p-3">
-                  <p className="text-xs uppercase tracking-[0.18em] text-zinc-500">Target</p>
-                  <p className="mt-2 text-sm text-zinc-300">Production-ready release</p>
+                  <p className="text-xs uppercase tracking-[0.18em] text-zinc-300">Target</p>
+                  <p className="mt-2 text-sm text-zinc-200">Production-ready release</p>
                 </div>
               </aside>
 
@@ -307,7 +307,7 @@ export default function HomePage() {
                       <div key={item.label} className="border-b border-r border-white/[0.08] p-5">
                         <div className="mb-4 flex items-center justify-between gap-4 text-sm">
                           <span className="text-zinc-300">{item.label}</span>
-                          <span className="text-zinc-500">{item.value}</span>
+                          <span className="text-zinc-300">{item.value}</span>
                         </div>
                         <div className="h-1.5 overflow-hidden rounded-full bg-white/[0.08]">
                           <div className={item.barClassName} />
@@ -317,7 +317,7 @@ export default function HomePage() {
                   </div>
 
                   <div className="border-l border-white/[0.08] bg-black/20 p-5">
-                    <p className="mb-4 text-xs uppercase tracking-[0.18em] text-zinc-500">Audit output</p>
+                    <p className="mb-4 text-xs uppercase tracking-[0.18em] text-zinc-300">Audit output</p>
                     <div className="space-y-3">
                       {t.hero.panel.notes.map((note, index) => (
                         <div key={note} className="flex items-center gap-3 rounded-md border border-white/[0.08] bg-white/[0.035] p-3 text-sm text-zinc-300">
@@ -333,7 +333,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <p className="border-t border-white/[0.08] bg-white/[0.025] px-5 py-4 text-sm leading-6 text-zinc-400">
+            <p className="border-t border-white/[0.08] bg-white/[0.025] px-5 py-4 text-sm leading-6 text-zinc-300">
               {t.hero.positioning}{" "}
               <Link href="/ai-app-stabilization" className="text-white underline decoration-white/30 underline-offset-4 transition-colors hover:text-violet-200">
                 View the AI app stabilization page
@@ -359,7 +359,7 @@ export default function HomePage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-medium leading-6 text-white">{item.title}</h3>
-                      <p className="mt-3 text-sm leading-6 text-zinc-400">{item.description}</p>
+                      <p className="mt-3 text-sm leading-6 text-zinc-300">{item.description}</p>
                     </div>
                   </CardHeader>
                 </Card>
@@ -389,7 +389,7 @@ export default function HomePage() {
                     </div>
                     <h3 className="text-2xl font-medium text-zinc-950">{item.title}</h3>
                     <p className="mt-1 text-sm font-medium text-violet-700">{item.subtitle}</p>
-                    <p className="pt-4 leading-7 text-zinc-600">{item.description}</p>
+                    <p className="pt-4 leading-7 text-zinc-700">{item.description}</p>
                   </CardHeader>
                   <CardContent className="mt-auto px-6 pb-6">
                     <ul className="space-y-3 text-sm text-zinc-700">
@@ -432,15 +432,15 @@ export default function HomePage() {
                   </div>
                   <div className="grid gap-4 lg:grid-cols-3">
                     <div>
-                      <p className="text-xs uppercase tracking-[0.18em] text-zinc-500">Problem</p>
+                      <p className="text-xs uppercase tracking-[0.18em] text-zinc-300">Problem</p>
                       <p className="mt-3 text-sm leading-6 text-zinc-300">{item.problem}</p>
                     </div>
                     <div>
-                      <p className="text-xs uppercase tracking-[0.18em] text-zinc-500">Solution</p>
+                      <p className="text-xs uppercase tracking-[0.18em] text-zinc-300">Solution</p>
                       <p className="mt-3 text-sm leading-6 text-zinc-300">{item.solution}</p>
                     </div>
                     <div>
-                      <p className="text-xs uppercase tracking-[0.18em] text-zinc-500">Outcome</p>
+                      <p className="text-xs uppercase tracking-[0.18em] text-zinc-300">Outcome</p>
                       <p className="mt-3 text-sm leading-6 text-zinc-300">{item.outcome}</p>
                     </div>
                   </div>
@@ -457,9 +457,9 @@ export default function HomePage() {
           <div className="grid gap-px overflow-hidden rounded-lg border border-white/[0.10] bg-white/[0.10] md:grid-cols-5">
             {t.process.steps.map((step, index) => (
               <div key={step.title} className="bg-[#111114] p-5">
-                <p className="mb-8 text-xs uppercase tracking-[0.18em] text-zinc-500">0{index + 1}</p>
+                <p className="mb-8 text-xs uppercase tracking-[0.18em] text-zinc-300">0{index + 1}</p>
                 <h3 className="text-lg font-medium text-white">{step.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-zinc-400">{step.description}</p>
+                <p className="mt-3 text-sm leading-6 text-zinc-300">{step.description}</p>
               </div>
             ))}
           </div>
@@ -481,7 +481,7 @@ export default function HomePage() {
                 className="rounded-lg border border-white/[0.10] bg-white/[0.035] p-6 transition-colors hover:border-violet-300/40 hover:bg-white/[0.05]"
               >
                 <p className="text-lg font-medium text-white">{item.title}</p>
-                <p className="mt-3 text-sm leading-6 text-zinc-400">{item.description}</p>
+                <p className="mt-3 text-sm leading-6 text-zinc-300">{item.description}</p>
               </Link>
             ))}
           </div>
@@ -522,7 +522,7 @@ export default function HomePage() {
           <div>
             <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-violet-300">{t.cta.eyebrow}</p>
             <h2 className="text-balance text-4xl font-medium text-white md:text-5xl">{t.cta.title}</h2>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-400">{t.cta.description}</p>
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-300">{t.cta.description}</p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
             <Button asChild size="lg" className="bg-white text-zinc-950 hover:bg-zinc-200">
@@ -552,11 +552,11 @@ export default function HomePage() {
             <Image src="/hexglyph-logo.png" alt="Hexglyph logo" width={30} height={30} className="rounded-md" />
             <div>
               <p className="font-medium text-white">Hexglyph</p>
-              <p className="text-sm text-zinc-500">{t.footer.tagline}</p>
+              <p className="text-sm text-zinc-300">{t.footer.tagline}</p>
             </div>
           </div>
-          <div className="flex flex-col gap-4 text-sm text-zinc-500 md:items-end">
-            <nav className="flex flex-wrap gap-4 text-zinc-400">
+          <div className="flex flex-col gap-4 text-sm text-zinc-300 md:items-end">
+            <nav className="flex flex-wrap gap-4 text-zinc-300">
               <Link href="/ai-app-stabilization" className="transition-colors hover:text-white">
                 AI App Stabilization
               </Link>

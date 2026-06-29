@@ -156,7 +156,7 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
             <Image src="/hexglyph-logo.png" alt="Hexglyph logo" width={34} height={34} className="rounded-md" priority />
             <span className="text-lg font-medium text-white">Hexglyph</span>
           </Link>
-          <nav className="hidden items-center gap-7 text-sm text-zinc-400 md:flex">
+          <nav className="hidden items-center gap-7 text-sm text-zinc-300 md:flex">
             {navLinks.map((item) => (
               <a key={item.href} href={item.href} className="transition-colors hover:text-white">
                 {item.label}
@@ -179,7 +179,7 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
             <h1 className="max-w-5xl text-balance text-5xl font-medium leading-[1.02] tracking-normal text-white md:text-7xl">
               {props.title}
             </h1>
-            <p className="mt-7 max-w-3xl text-xl leading-9 text-zinc-400">{props.description}</p>
+            <p className="mt-7 max-w-3xl text-xl leading-9 text-zinc-300">{props.description}</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg" className="bg-white text-zinc-950 hover:bg-zinc-200">
                 <a href={props.auditHref}>
@@ -196,7 +196,7 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
                 <a href="#deliverables">See Deliverables</a>
               </Button>
             </div>
-            <p className="mt-7 max-w-3xl text-sm leading-6 text-zinc-500">{props.introNote}</p>
+            <p className="mt-7 max-w-3xl text-sm leading-6 text-zinc-300">{props.introNote}</p>
           </div>
 
           <div className="overflow-hidden rounded-lg border border-white/[0.10] bg-[#0d0d10] shadow-[0_40px_120px_rgba(0,0,0,0.45)]">
@@ -207,7 +207,7 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
             <div className="grid gap-px bg-white/[0.08] sm:grid-cols-2">
               {props.heroStats.map((item) => (
                 <div key={item.label} className="bg-[#111114] p-5">
-                  <p className="text-xs uppercase tracking-[0.18em] text-zinc-500">{item.label}</p>
+                  <p className="text-xs uppercase tracking-[0.18em] text-zinc-300">{item.label}</p>
                   <p className="mt-4 text-lg font-medium text-zinc-100">{item.value}</p>
                 </div>
               ))}
@@ -229,7 +229,7 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
           <div className="mx-auto mb-12 max-w-3xl text-center">
             <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-emerald-300">{props.symptomTitle}</p>
             <h2 className="text-balance text-3xl font-medium text-white md:text-5xl">Common failure points.</h2>
-            <p className="mt-5 text-lg leading-8 text-zinc-400">{props.symptomDescription}</p>
+            <p className="mt-5 text-lg leading-8 text-zinc-300">{props.symptomDescription}</p>
           </div>
 
           <div className="grid gap-px overflow-hidden rounded-lg border border-white/[0.10] bg-white/[0.10] md:grid-cols-2 lg:grid-cols-4">
@@ -240,7 +240,7 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
                 <article key={item.title} className="bg-[#0d0d10] p-6">
                   <Icon className="mb-6 h-5 w-5 text-emerald-300" />
                   <h3 className="text-lg font-medium text-white">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-zinc-400">{item.description}</p>
+                  <p className="mt-3 text-sm leading-6 text-zinc-300">{item.description}</p>
                 </article>
               )
             })}
@@ -253,7 +253,7 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
           <div>
             <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-emerald-800">{props.deliverablesTitle}</p>
             <h2 className="text-balance text-3xl font-medium md:text-5xl">{props.valuesTitle}</h2>
-            <p className="mt-5 text-lg leading-8 text-zinc-600">{props.deliverablesDescription}</p>
+            <p className="mt-5 text-lg leading-8 text-zinc-700">{props.deliverablesDescription}</p>
             <Button asChild size="lg" className="mt-8 bg-zinc-950 text-white hover:bg-zinc-800">
               <a href={props.auditHref}>
                 Start Audit Scope
@@ -278,7 +278,7 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
           <div className="mx-auto mb-12 max-w-3xl text-center">
             <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-emerald-300">Working approach</p>
             <h2 className="text-balance text-3xl font-medium text-white md:text-5xl">{props.valuesTitle}</h2>
-            <p className="mt-5 text-lg leading-8 text-zinc-400">{props.valuesDescription}</p>
+            <p className="mt-5 text-lg leading-8 text-zinc-300">{props.valuesDescription}</p>
           </div>
 
           <div className="grid gap-px overflow-hidden rounded-lg border border-white/[0.10] bg-white/[0.10] md:grid-cols-2 lg:grid-cols-4">
@@ -289,7 +289,7 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
                 <div key={item.title} className="bg-[#0d0d10] p-6">
                   <Icon className="mb-8 h-5 w-5 text-emerald-300" />
                   <h3 className="text-lg font-medium text-white">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-zinc-400">{item.description}</p>
+                  <p className="mt-3 text-sm leading-6 text-zinc-300">{item.description}</p>
                 </div>
               )
             })}
@@ -306,9 +306,9 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
           <div className="space-y-3">
             {props.process.map((item, index) => (
               <div key={item.title} className="rounded-lg border border-white/[0.10] bg-white/[0.035] p-5">
-                <p className="mb-4 text-xs uppercase tracking-[0.18em] text-zinc-500">0{index + 1}</p>
+                <p className="mb-4 text-xs uppercase tracking-[0.18em] text-zinc-300">0{index + 1}</p>
                 <h3 className="text-lg font-medium text-white">{item.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-zinc-400">{item.description}</p>
+                <p className="mt-3 text-sm leading-6 text-zinc-300">{item.description}</p>
               </div>
             ))}
           </div>
@@ -320,7 +320,7 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
           <div className="mx-auto mb-12 max-w-3xl text-center">
             <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-emerald-800">Indexing language</p>
             <h2 className="text-balance text-3xl font-medium md:text-5xl">Search terms used on the page.</h2>
-            <p className="mt-5 text-lg leading-8 text-zinc-600">
+            <p className="mt-5 text-lg leading-8 text-zinc-700">
               These terms are present in visible copy so search systems can map the page to the service being offered.
             </p>
           </div>
@@ -344,7 +344,7 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
             {props.faqs.map((item) => (
               <article key={item.question} className="rounded-lg border border-white/[0.10] bg-white/[0.035] p-5">
                 <h3 className="text-lg font-medium text-white">{item.question}</h3>
-                <p className="mt-3 text-sm leading-6 text-zinc-400">{item.answer}</p>
+                <p className="mt-3 text-sm leading-6 text-zinc-300">{item.answer}</p>
               </article>
             ))}
           </div>
@@ -365,7 +365,7 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
                 className="rounded-lg border border-white/[0.10] bg-white/[0.035] p-6 transition-colors hover:border-emerald-300/40 hover:bg-white/[0.05]"
               >
                 <p className="text-lg font-medium text-white">{item.title}</p>
-                <p className="mt-3 text-sm leading-6 text-zinc-400">{item.description}</p>
+                <p className="mt-3 text-sm leading-6 text-zinc-300">{item.description}</p>
               </Link>
             ))}
           </div>
@@ -377,7 +377,7 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
           <div>
             <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-emerald-300">Next step</p>
             <h2 className="text-balance text-4xl font-medium text-white md:text-5xl">{props.contactTitle}</h2>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-400">{props.contactDescription}</p>
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-300">{props.contactDescription}</p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
             <Button asChild size="lg" className="bg-white text-zinc-950 hover:bg-zinc-200">
