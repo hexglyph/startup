@@ -1,10 +1,10 @@
 import { ServiceLandingPage } from "@/components/service-landing-page"
+import { buildContactHref } from "@/lib/contact"
 import type { Metadata } from "next"
 
 const baseUrl = "https://hexglyph.com"
 const pageUrl = `${baseUrl}/nextjs-performance`
-const contactEmail = "hex@hexglyph.com"
-const auditHref = `mailto:${contactEmail}?subject=Next.js%20Performance%20Audit`
+const auditHref = buildContactHref({ service: "nextjs-performance", source: "nextjs-performance-page" })
 
 const title = "Next.js Performance Audit and React App Optimization"
 const description =

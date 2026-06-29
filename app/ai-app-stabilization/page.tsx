@@ -1,10 +1,10 @@
 import { ServiceLandingPage } from "@/components/service-landing-page"
+import { buildContactHref } from "@/lib/contact"
 import type { Metadata } from "next"
 
 const baseUrl = "https://hexglyph.com"
 const pageUrl = `${baseUrl}/ai-app-stabilization`
-const contactEmail = "hex@hexglyph.com"
-const auditHref = `mailto:${contactEmail}?subject=AI%20App%20Stabilization%20Audit`
+const auditHref = buildContactHref({ service: "ai-app-stabilization", source: "ai-app-stabilization-page" })
 
 const title = "AI App Stabilization for Lovable, Bolt.new, v0 and Cursor Apps"
 const description =

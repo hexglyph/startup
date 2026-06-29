@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { LeadCtaLink } from "@/components/lead-cta-link"
 import {
   ArrowRight,
   CheckCircle2,
@@ -182,10 +183,10 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
             <p className="mt-7 max-w-3xl text-xl leading-9 text-zinc-300">{props.description}</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg" className="bg-white text-zinc-950 hover:bg-zinc-200">
-                <a href={props.auditHref}>
+                <LeadCtaLink href={props.auditHref} ctaId="service-hero-primary">
                   Request Technical Audit
                   <ArrowRight className="h-5 w-5" />
-                </a>
+                </LeadCtaLink>
               </Button>
               <Button
                 asChild
@@ -255,10 +256,10 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
             <h2 className="text-balance text-3xl font-medium md:text-5xl">{props.valuesTitle}</h2>
             <p className="mt-5 text-lg leading-8 text-zinc-700">{props.deliverablesDescription}</p>
             <Button asChild size="lg" className="mt-8 bg-zinc-950 text-white hover:bg-zinc-800">
-              <a href={props.auditHref}>
+              <LeadCtaLink href={props.auditHref} ctaId="service-deliverables-primary">
                 Start Audit Scope
                 <ArrowRight className="h-5 w-5" />
-              </a>
+              </LeadCtaLink>
             </Button>
           </div>
 
@@ -381,10 +382,10 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
             <Button asChild size="lg" className="bg-white text-zinc-950 hover:bg-zinc-200">
-              <a href={props.auditHref}>
+              <LeadCtaLink href={props.auditHref} ctaId="service-contact-primary">
                 Request Audit
                 <ArrowRight className="h-5 w-5" />
-              </a>
+              </LeadCtaLink>
             </Button>
             <Button
               asChild

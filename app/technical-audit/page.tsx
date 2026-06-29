@@ -1,10 +1,10 @@
 import { ServiceLandingPage } from "@/components/service-landing-page"
+import { buildContactHref } from "@/lib/contact"
 import type { Metadata } from "next"
 
 const baseUrl = "https://hexglyph.com"
 const pageUrl = `${baseUrl}/technical-audit`
-const contactEmail = "hex@hexglyph.com"
-const auditHref = `mailto:${contactEmail}?subject=Technical%20Audit%20Request`
+const auditHref = buildContactHref({ service: "technical-audit", source: "technical-audit-page" })
 
 const title = "Technical Audit Service for MVPs, AI Apps and Legacy Systems"
 const description =

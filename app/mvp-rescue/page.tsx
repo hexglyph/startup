@@ -1,10 +1,10 @@
 import { ServiceLandingPage } from "@/components/service-landing-page"
+import { buildContactHref } from "@/lib/contact"
 import type { Metadata } from "next"
 
 const baseUrl = "https://hexglyph.com"
 const pageUrl = `${baseUrl}/mvp-rescue`
-const contactEmail = "hex@hexglyph.com"
-const auditHref = `mailto:${contactEmail}?subject=MVP%20Rescue%20Audit`
+const auditHref = buildContactHref({ service: "mvp-rescue", source: "mvp-rescue-page" })
 
 const title = "MVP Rescue Service for Unstable Startup Products"
 const description =

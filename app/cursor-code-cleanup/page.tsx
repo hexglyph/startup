@@ -1,10 +1,10 @@
 import { ServiceLandingPage } from "@/components/service-landing-page"
+import { buildContactHref } from "@/lib/contact"
 import type { Metadata } from "next"
 
 const baseUrl = "https://hexglyph.com"
 const pageUrl = `${baseUrl}/cursor-code-cleanup`
-const contactEmail = "hex@hexglyph.com"
-const auditHref = `mailto:${contactEmail}?subject=Cursor%20Code%20Cleanup%20Audit`
+const auditHref = buildContactHref({ service: "cursor-code-cleanup", source: "cursor-code-cleanup-page" })
 
 const title = "Cursor Code Cleanup and AI-Generated Code Refactoring"
 const description =

@@ -1,6 +1,8 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import { LeadCtaLink } from "@/components/lead-cta-link"
+import { buildContactHref } from "@/lib/contact"
 import { translations } from "@/lib/translations"
 import {
   ArrowRight,
@@ -32,7 +34,7 @@ import Link from "next/link"
 
 const t = translations.en
 const siteUrl = "https://hexglyph.com"
-const auditHref = `mailto:${t.footer.contact}?subject=Technical%20Audit%20Request`
+const auditHref = buildContactHref({ service: "technical-audit", source: "home-page" })
 const pageTitle = "Technical Audits and AI App Stabilization"
 const pageDescription =
   "Technical audits, stabilization sprints, and production-grade engineering for unstable MVPs, AI-generated apps, and legacy web systems."
@@ -249,10 +251,10 @@ export default function HomePage() {
             <p className="mx-auto mt-7 max-w-3xl text-xl leading-9 text-zinc-300">{t.hero.description}</p>
             <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
               <Button asChild size="lg" className="bg-white text-zinc-950 hover:bg-zinc-200">
-                <a href={auditHref}>
+                <LeadCtaLink href={auditHref} ctaId="home-hero-primary">
                   {t.hero.primaryCta}
                   <ArrowRight className="h-5 w-5" />
-                </a>
+                </LeadCtaLink>
               </Button>
               <Button
                 asChild
@@ -526,10 +528,10 @@ export default function HomePage() {
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
             <Button asChild size="lg" className="bg-white text-zinc-950 hover:bg-zinc-200">
-              <a href={auditHref}>
+              <LeadCtaLink href={auditHref} ctaId="home-contact-primary">
                 {t.cta.primary}
                 <ArrowRight className="h-5 w-5" />
-              </a>
+              </LeadCtaLink>
             </Button>
             <Button
               asChild

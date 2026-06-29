@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
+import { GoogleAdsScript } from "@/components/google-ads-script"
+import { MarketingAttributionScript } from "@/components/marketing-attribution-script"
 import "./globals.css"
 
 const siteUrl = "https://hexglyph.com"
@@ -82,6 +84,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="theme-color" content="#060607" />
         <style>{`
 html {
   font-family: ${GeistSans.style.fontFamily};
@@ -89,6 +92,8 @@ html {
   --font-mono: ${GeistMono.variable};
 }
         `}</style>
+        <GoogleAdsScript />
+        <MarketingAttributionScript />
       </head>
       <body className={`${GeistSans.variable} ${GeistMono.variable}`}>{children}</body>
     </html>
