@@ -168,19 +168,19 @@ export default function TechnicalAuditPage() {
       ]}
       relatedPages={[
         {
-          href: "/ai-app-stabilization",
-          title: "AI app stabilization",
-          description: "For Lovable, Bolt.new, v0, and Cursor-generated apps that need senior engineering before launch.",
+          href: "/ai-app-consulting",
+          title: "AI app consulting",
+          description: "For architecture, scope, and sequencing decisions when the team needs direction before implementation.",
         },
         {
-          href: "/legacy-modernization",
-          title: "Legacy modernization",
-          description: "For brittle internal tools and older systems that need safer delivery and controlled refactoring.",
+          href: "/ai-app-production-readiness",
+          title: "AI app production readiness",
+          description: "For narrower launch and operational hardening once the broad diagnosis is already clear.",
         },
         {
-          href: "/",
-          title: "Hexglyph home",
-          description: "See packages, case studies, and the broader software rescue positioning.",
+          href: "/ai-app-security-review",
+          title: "AI app security review",
+          description: "For security-specific findings around auth, secrets, permissions, and data exposure.",
         },
       ]}
       contactTitle="Need a technical audit for an existing codebase?"

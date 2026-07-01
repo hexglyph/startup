@@ -173,19 +173,19 @@ export default function AiAppStabilizationPage() {
       ]}
       relatedPages={[
         {
-          href: "/technical-audit",
-          title: "Technical audit service",
-          description: "Dedicated entry page for codebase audits, risk maps, implementation plans, and paid discovery.",
+          href: "/ai-app-consulting",
+          title: "AI app consulting",
+          description: "For architecture, scope, and delivery decisions before more effort goes into the current app.",
         },
         {
-          href: "/legacy-modernization",
-          title: "Legacy modernization",
-          description: "Service page for rescuing brittle internal tools, old web systems, and slow delivery pipelines.",
+          href: "/ai-app-production-readiness",
+          title: "AI app production readiness",
+          description: "For launch preparation once the AI app is stable enough to focus on deployment and operations.",
         },
         {
-          href: "/",
-          title: "Hexglyph home",
-          description: "Overview of stabilization packages, case studies, and the broader service offer.",
+          href: "/ai-app-security-review",
+          title: "AI app security review",
+          description: "For auth, secrets, permissions, and data-exposure checks before broader rollout.",
         },
       ]}
       contactTitle="Need technical review or implementation support for an unstable AI app?"

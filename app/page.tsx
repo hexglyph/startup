@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { LeadCtaLink } from "@/components/lead-cta-link"
 import { buildContactHref } from "@/lib/contact"
+import { servicePageCatalog } from "@/lib/service-pages"
 import { translations } from "@/lib/translations"
 import {
   ArrowRight,
@@ -37,7 +38,7 @@ const siteUrl = "https://hexglyph.com"
 const auditHref = buildContactHref({ service: "technical-audit", source: "home-page" })
 const pageTitle = "Technical Audits and AI App Stabilization"
 const pageDescription =
-  "Technical audits, stabilization sprints, and production-grade engineering for unstable MVPs, AI-generated apps, and legacy web systems."
+  "Technical audits, AI app consulting, development help, stabilization sprints, and production-grade engineering for unstable MVPs, AI-generated apps, and legacy web systems."
 
 const navItems = [
   { href: "/ai-app-stabilization", label: t.nav.aiAppStabilization },
@@ -82,42 +83,18 @@ const workspaceItems = [
   { label: "Handoff", value: "Draft" },
 ]
 
-const discoverItems = [
-  {
-    href: "/ai-app-stabilization",
-    title: "AI app stabilization",
-    description: "Dedicated page for Lovable, Bolt.new, v0, and Cursor-generated apps that need production engineering.",
-  },
-  {
-    href: "/technical-audit",
-    title: "Technical audit service",
-    description: "Entry page for codebase audits, risk maps, implementation planning, and production-readiness reviews.",
-  },
-  {
-    href: "/legacy-modernization",
-    title: "Legacy modernization",
-    description: "Service page for internal tools and aging systems that need controlled refactoring, production hardening, and clearer delivery.",
-  },
-  {
-    href: "/mvp-rescue",
-    title: "MVP rescue",
-    description: "Launch-focused service page for unstable startup products that need bug fixing and production hardening.",
-  },
-  {
-    href: "/cursor-code-cleanup",
-    title: "Cursor code cleanup",
-    description: "Entry page for refactoring AI-generated code, reducing duplication, and cleaning up fragile architecture.",
-  },
-  {
-    href: "/nextjs-performance",
-    title: "Next.js performance",
-    description: "Dedicated page for slow pages, weak Core Web Vitals, and React or Next.js optimization work.",
-  },
-]
-
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: [
+    "AI app consulting",
+    "AI app development help",
+    "AI app production readiness",
+    "AI app security review",
+    "AI app setup",
+    "technical audit",
+    "AI app stabilization",
+  ],
   alternates: {
     canonical: "/",
   },
@@ -161,6 +138,11 @@ const schema = [
     serviceType: [
       "Technical audit",
       "AI app stabilization",
+      "AI app development help",
+      "AI app consulting",
+      "AI app production readiness",
+      "AI app security review",
+      "AI app setup and configuration",
       "Software rescue",
       "Legacy modernization",
     ],
@@ -473,10 +455,10 @@ export default function HomePage() {
           <SectionIntro
             eyebrow="Service index"
             title="Primary service pages"
-            description="These pages cover the main service lines and are linked directly from the homepage."
+            description="These pages cover the main service lines and specific search intents for AI app build, consulting, launch, security, and configuration work."
           />
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {discoverItems.map((item) => (
+            {servicePageCatalog.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}

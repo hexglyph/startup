@@ -1,15 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight, CheckCircle2 } from "lucide-react"
-
-const serviceLabels: Record<string, string> = {
-  "technical-audit": "technical audit",
-  "ai-app-stabilization": "AI app stabilization review",
-  "legacy-modernization": "legacy modernization review",
-  "mvp-rescue": "MVP rescue review",
-  "cursor-code-cleanup": "Cursor code cleanup review",
-  "nextjs-performance": "Next.js performance review",
-}
+import { serviceLabels } from "@/lib/service-pages"
 
 export const metadata: Metadata = {
   title: "Thanks",
@@ -37,7 +29,7 @@ export default async function ThankYouPage({
         </div>
         <p className="mt-6 text-xs font-medium uppercase tracking-[0.22em] text-emerald-300">Lead received</p>
         <h1 className="mt-4 text-balance text-4xl font-medium leading-tight text-white md:text-5xl">
-          Thanks. The request for your {serviceLabel} is in.
+          Thanks. Your request for {serviceLabel} is in.
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-zinc-300">
           Hexglyph will review the context and reply by email. If useful, send repository access, deployment links, or a shortlist of current blockers in a follow-up message.

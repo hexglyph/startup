@@ -3,19 +3,11 @@ import Link from "next/link"
 import { ArrowLeft, CheckCircle2, Mail, ShieldCheck } from "lucide-react"
 
 import { LeadIntakeForm } from "@/components/lead-intake-form"
-
-const serviceLabels: Record<string, string> = {
-  "technical-audit": "Technical Audit",
-  "ai-app-stabilization": "AI App Stabilization",
-  "legacy-modernization": "Legacy Modernization",
-  "mvp-rescue": "MVP Rescue",
-  "cursor-code-cleanup": "Cursor Code Cleanup",
-  "nextjs-performance": "Next.js Performance",
-}
+import { serviceLabels } from "@/lib/service-pages"
 
 export const metadata: Metadata = {
-  title: "Request a Technical Audit",
-  description: "Contact Hexglyph to request a technical audit, stabilization sprint, or scoped implementation plan.",
+  title: "Request a Review",
+  description: "Contact Hexglyph to request a technical audit, AI app consulting review, stabilization sprint, or scoped implementation plan.",
   alternates: {
     canonical: "/contact",
   },
