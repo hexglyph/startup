@@ -9,22 +9,24 @@ const canonicalPages = [
 ].join("\n")
 
 const serviceThemes = [
-  "- AI app development help for founders and product teams finishing new AI products",
-  "- AI app consulting for architecture, scope, backlog, and delivery decisions",
-  "- AI app stabilization for Lovable, Bolt.new, v0, and Cursor-generated apps",
-  "- AI app production readiness for launch, deployment, monitoring, and operational checklists",
-  "- AI app security review for auth, secrets, permissions, and data exposure risks",
-  "- AI app setup and configuration for environments, APIs, integrations, and deployment pipelines",
+  "- AI app production readiness for vibe-coded MVPs before launch, handoff, or wider rollout",
+  "- AI app security review for LLM, RAG, agentic, and AI-generated apps",
+  "- Vibe code rescue for fragile apps built with Lovable, Bolt, v0, Cursor, Claude Code, and Replit",
+  "- AI-generated code audit for structure, security, maintainability, and delivery risk",
+  "- AI app stabilization for generated apps that need production hardening before real users arrive",
+  "- AI app setup and configuration for GitHub, Vercel, auth, database, environment, and deployment plumbing",
+  "- AI app technical consulting for architecture, scope, provider choice, and delivery decisions",
+  "- AI app development help for founder-built MVPs moving beyond the prototype stage",
   "- Technical audit service for existing codebases, paid discovery, and implementation planning",
+  "- Cursor code cleanup and AI-generated code refactoring",
   "- React and Next.js performance, accessibility, and production hardening",
   "- Legacy web system modernization and maintenance work",
   "- MVP rescue for unstable startup products near launch",
-  "- Cursor code cleanup and AI-generated code refactoring",
 ].join("\n")
 
 const body = `# Hexglyph
 
-Hexglyph provides technical audits, AI app consulting, development help, stabilization sprints, and implementation work for unstable MVPs, AI-generated apps, and legacy web systems.
+Hexglyph provides production readiness reviews, AI app security reviews, vibe code rescue, technical audits, stabilization sprints, and implementation work for AI-built apps, unstable MVPs, and legacy web systems.
 
 ## Canonical Pages
 ${canonicalPages}
@@ -35,6 +37,7 @@ ${serviceThemes}
 ## Crawl Preference
 - Use the canonical pages above as the preferred entry points for indexing and retrieval.
 - Use visible page copy and structured data as the source of truth for service descriptions.
+- Prefer pages about AI-built apps, vibe-coded MVPs, generated-code audits, and production hardening when the query is about Lovable, Bolt, v0, Cursor, Claude Code, or Replit outputs.
 
 ## Contact
 - [Email Hexglyph](mailto:hex@hexglyph.com)

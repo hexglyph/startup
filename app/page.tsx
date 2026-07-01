@@ -36,9 +36,9 @@ import Link from "next/link"
 const t = translations.en
 const siteUrl = "https://hexglyph.com"
 const auditHref = buildContactHref({ service: "technical-audit", source: "home-page" })
-const pageTitle = "Technical Audits and AI App Stabilization"
+const pageTitle = "AI-Built App Reviews, Vibe Code Rescue and Production Hardening"
 const pageDescription =
-  "Technical audits, AI app consulting, development help, stabilization sprints, and production-grade engineering for unstable MVPs, AI-generated apps, and legacy web systems."
+  "Production readiness reviews, AI app security reviews, vibe code rescue, technical audits, and stabilization for AI-built apps created with Lovable, Bolt, v0, Cursor, Claude Code, and Replit."
 
 const navItems = [
   { href: "/ai-app-stabilization", label: t.nav.aiAppStabilization },
@@ -83,17 +83,44 @@ const workspaceItems = [
   { label: "Handoff", value: "Draft" },
 ]
 
+const aiBuiltAppSlugs = new Set([
+  "ai-app-production-readiness",
+  "ai-app-security-review",
+  "vibe-code-rescue",
+  "ai-generated-code-audit",
+  "ai-app-stabilization",
+  "cursor-code-cleanup",
+  "ai-app-setup",
+  "ai-app-consulting",
+])
+
+const aiBuiltAppItems = servicePageCatalog.filter((item) => aiBuiltAppSlugs.has(item.slug))
+
+const footerSlugs = new Set([
+  "ai-app-production-readiness",
+  "ai-app-security-review",
+  "vibe-code-rescue",
+  "ai-generated-code-audit",
+  "ai-app-stabilization",
+  "cursor-code-cleanup",
+  "technical-audit",
+  "ai-app-consulting",
+])
+
+const footerItems = servicePageCatalog.filter((item) => footerSlugs.has(item.slug))
+
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
   keywords: [
-    "AI app consulting",
-    "AI app development help",
     "AI app production readiness",
     "AI app security review",
-    "AI app setup",
+    "vibe code rescue",
+    "AI-generated code audit",
+    "AI-generated app stabilization",
+    "Lovable app fix",
+    "Bolt app fix",
     "technical audit",
-    "AI app stabilization",
   ],
   alternates: {
     canonical: "/",
@@ -136,15 +163,8 @@ const schema = [
     description: pageDescription,
     areaServed: "Worldwide",
     serviceType: [
-      "Technical audit",
-      "AI app stabilization",
-      "AI app development help",
-      "AI app consulting",
-      "AI app production readiness",
-      "AI app security review",
-      "AI app setup and configuration",
+      ...servicePageCatalog.map((page) => page.title),
       "Software rescue",
-      "Legacy modernization",
     ],
   },
   {
@@ -319,8 +339,8 @@ export default function HomePage() {
 
             <p className="border-t border-white/[0.08] bg-white/[0.025] px-5 py-4 text-sm leading-6 text-zinc-300">
               {t.hero.positioning}{" "}
-              <Link href="/ai-app-stabilization" className="text-white underline decoration-white/30 underline-offset-4 transition-colors hover:text-violet-200">
-                View the AI app stabilization page
+              <Link href="/ai-app-production-readiness" className="text-white underline decoration-white/30 underline-offset-4 transition-colors hover:text-violet-200">
+                View the AI app production readiness page
               </Link>
               .
             </p>
@@ -453,9 +473,31 @@ export default function HomePage() {
       <section className="border-b border-white/[0.08] px-4 py-24">
         <div className="mx-auto max-w-7xl">
           <SectionIntro
+            eyebrow="AI-built app services"
+            title="Search pages built around the real founder pain."
+            description="These landing pages target production hardening, security review, vibe code rescue, generated-code audits, setup, and technical decision support for AI-built apps."
+          />
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {aiBuiltAppItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="rounded-lg border border-white/[0.10] bg-white/[0.035] p-6 transition-colors hover:border-violet-300/40 hover:bg-white/[0.05]"
+              >
+                <p className="text-lg font-medium text-white">{item.title}</p>
+                <p className="mt-3 text-sm leading-6 text-zinc-300">{item.description}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-white/[0.08] px-4 py-24">
+        <div className="mx-auto max-w-7xl">
+          <SectionIntro
             eyebrow="Service index"
             title="Primary service pages"
-            description="These pages cover the main service lines and specific search intents for AI app build, consulting, launch, security, and configuration work."
+            description="These pages cover the broader service lines plus the narrower search intents around AI-generated app rescue, hardening, and production delivery."
           />
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {servicePageCatalog.map((item) => (
@@ -541,24 +583,11 @@ export default function HomePage() {
           </div>
           <div className="flex flex-col gap-4 text-sm text-zinc-300 md:items-end">
             <nav className="flex flex-wrap gap-4 text-zinc-300">
-              <Link href="/ai-app-stabilization" className="transition-colors hover:text-white">
-                AI App Stabilization
-              </Link>
-              <Link href="/technical-audit" className="transition-colors hover:text-white">
-                Technical Audit
-              </Link>
-              <Link href="/legacy-modernization" className="transition-colors hover:text-white">
-                Legacy Modernization
-              </Link>
-              <Link href="/mvp-rescue" className="transition-colors hover:text-white">
-                MVP Rescue
-              </Link>
-              <Link href="/cursor-code-cleanup" className="transition-colors hover:text-white">
-                Cursor Cleanup
-              </Link>
-              <Link href="/nextjs-performance" className="transition-colors hover:text-white">
-                Next.js Performance
-              </Link>
+              {footerItems.map((item) => (
+                <Link key={item.href} href={item.href} className="transition-colors hover:text-white">
+                  {item.title}
+                </Link>
+              ))}
               <a href="#services" className="transition-colors hover:text-white">
                 Services
               </a>

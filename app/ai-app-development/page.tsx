@@ -6,22 +6,26 @@ const baseUrl = "https://hexglyph.com"
 const pageUrl = `${baseUrl}/ai-app-development`
 const auditHref = buildContactHref({ service: "ai-app-development", source: "ai-app-development-page" })
 
-const title = "AI App Development Help for Founders and Product Teams"
+const title = "AI App Development for Founder-Built MVPs"
 const description =
-  "AI app development help for founders and product teams building a real AI product beyond the prototype stage. Get senior support for architecture, features, integrations, launch scope, and production-ready delivery."
+  "Hexglyph helps founders and product teams move from an AI-generated prototype to a real product. Get senior support for feature completion, architecture, integrations, auth, deployment, and launch-ready engineering."
 
 export const metadata: Metadata = {
   title,
   description,
+  robots: {
+    index: true,
+    follow: true,
+  },
   keywords: [
-    "AI app development",
-    "AI app development help",
-    "build AI app",
-    "AI app developer",
+    "AI app development for startups",
     "AI MVP development",
+    "AI app development for founders",
+    "custom AI app development Next.js",
+    "AI SaaS MVP development",
     "LLM app development",
-    "AI product engineering",
-    "launch AI app",
+    "founder built AI app",
+    "AI-generated prototype to product",
   ],
   alternates: {
     canonical: "/ai-app-development",
@@ -37,7 +41,7 @@ export const metadata: Metadata = {
         url: "/og-ai-app-stabilization.svg",
         width: 1200,
         height: 630,
-        alt: "AI app development help for founders and product teams",
+        alt: "AI app development for founder-built MVPs",
       },
     ],
   },
@@ -52,139 +56,171 @@ export const metadata: Metadata = {
 export default function AiAppDevelopmentPage() {
   return (
     <ServiceLandingPage
-      badge="AI app development help"
-      title="Build the AI app past the prototype stage and into a usable product."
+      badge="AI app development for founders"
+      title="AI app development after the prototype stage"
       description={description}
       pageUrl={pageUrl}
       auditHref={auditHref}
-      introNote="Main indexing terms: AI app development, AI app development help, build AI app, AI app developer, AI MVP development, LLM app development, AI product engineering, launch AI app."
+      introNote="Main indexing terms: AI app development for startups, AI MVP development, AI app development for founders, custom AI app development Next.js, AI SaaS MVP development, LLM app development."
       heroStats={[
-        { label: "Product scope", value: "Needs shaping" },
-        { label: "Core workflows", value: "In progress" },
-        { label: "Integrations", value: "Pending" },
-        { label: "Launch path", value: "Needs owner" },
+        { label: "Prototype", value: "Already built" },
+        { label: "Core product", value: "Incomplete" },
+        { label: "Integrations", value: "Needs wiring" },
+        { label: "Launch path", value: "Unclear" },
       ]}
-      symptomTitle="When build support is the real need"
-      symptomDescription="Many teams already have a demo, a generated UI, or a partially built repository. The gap is turning that into a coherent AI app with working flows, integrations, and production-grade basics."
+      audiencesTitle="Who this is for"
+      audiencesDescription="This is for teams that already have a prototype, generated app, or founder-built MVP and now need senior engineering to turn it into a usable product."
+      audiences={[
+        "Founder-built MVPs that already have a demo, but not a release-grade product.",
+        "Startup teams moving from Lovable, Bolt, v0, Cursor, or Replit output into a real app.",
+        "Agencies or product teams that need a senior build partner to finish the critical path.",
+        "Products that need auth, business logic, integrations, and maintainability before launch.",
+      ]}
+      symptomTitle="Where development usually stalls"
+      symptomDescription="The hard part is rarely generating the first screens. The hard part is building the missing product layer: business logic, integrations, auth, operational basics, and maintainable code."
       symptoms={[
         {
-          title: "The idea is validated but the product is not finished",
-          description: "You know what the AI app should do, but the actual engineering work needed for auth, workflows, data, and edge cases is still missing.",
+          title: "The app looks real but is not product-complete",
+          description: "The UI exists, but the workflows, permissions, data handling, and edge cases still need proper engineering.",
         },
         {
-          title: "The prototype does not survive real usage",
-          description: "The initial build looked promising, but actual usage reveals broken flows, weak state handling, or missing operational basics.",
+          title: "The prototype cannot survive real users",
+          description: "Generated code or a quick founder build starts breaking when authentication, real data, and external services enter the picture.",
         },
         {
-          title: "The team needs a senior build partner",
-          description: "Founders or product teams need help translating product goals into architecture, implementation choices, and a deliverable first release.",
+          title: "The team needs senior build judgment",
+          description: "There is already motion, but the next release needs someone who can shape architecture and implementation at the same time.",
         },
         {
-          title: "The AI product needs focused shipping help",
-          description: "The main blocker is not brainstorming. It is building the right slice, avoiding waste, and shipping something that can keep improving.",
+          title: "Roadmap pressure is stronger than engineering clarity",
+          description: "The team knows what should happen commercially, but the app still lacks the build sequence needed to get there safely.",
         },
       ]}
-      deliverablesTitle="Build scope"
-      deliverablesDescription="This work turns an AI app concept, prototype, or partial codebase into a clearer and more production-aware implementation track."
+      deliverablesTitle="Build the next real release of the AI app"
+      deliverablesDescription="Hexglyph steps in after the prototype stage to complete the product slice that turns a promising demo into something people can actually use."
       deliverables={[
-        "Shape the first real release scope for the AI app",
-        "Review architecture choices for frontend, backend, and AI workflows",
-        "Implement critical flows, business logic, and product glue code",
-        "Add auth, validation, and operational basics where needed",
-        "Connect APIs, LLM providers, storage, queues, or external services",
-        "Reduce throwaway work from generated or rushed code",
-        "Prepare the codebase for handoff, follow-on development, or launch",
-        "Document the recommended next build sequence",
+        "Scope the next production-relevant release instead of another vague prototype iteration",
+        "Implement missing frontend, backend, and AI workflow logic",
+        "Add auth, validation, data boundaries, and core business rules",
+        "Connect LLM providers, APIs, storage, email, payments, or background jobs",
+        "Reduce risky generated-code shortcuts before they spread further",
+        "Harden the implementation around error handling and failure states",
+        "Prepare the app for stabilization, launch, or handoff",
+        "Document the next build sequence so the product can keep moving",
+      ]}
+      toolingTitle="Tools covered"
+      toolingDescription="This work starts from the tools and stack already in the repository instead of pretending the app is being built from zero."
+      tools={[
+        "Lovable",
+        "Bolt.new",
+        "v0",
+        "Cursor",
+        "Claude Code",
+        "Replit",
+        "Next.js",
+        "React",
+        "Supabase",
+        "Firebase",
+        "Postgres",
+        "Vercel",
       ]}
       valuesTitle="Senior product engineering for AI apps that need to become real software."
-      valuesDescription="The goal is not just to make the demo look finished. It is to build the parts that make the AI app usable, maintainable, and worth shipping."
+      valuesDescription="The goal is not to make the prototype look slightly nicer. It is to build the product layer that makes the AI app usable, extendable, and worth shipping."
       values={[
         {
           title: "Scope",
-          description: "Turn vague product intent into a realistic build slice with clearer priorities and fewer dead ends.",
+          description: "Turn founder intent into a build slice that is realistic enough to ship and specific enough to implement.",
         },
         {
           title: "Build",
-          description: "Implement the highest-value flows across frontend, backend, and AI-driven behavior.",
+          description: "Complete the highest-leverage product flows across frontend, backend, and AI behavior.",
         },
         {
           title: "Integrate",
-          description: "Connect providers, APIs, storage, and supporting systems without leaving brittle seams behind.",
+          description: "Connect the app to the real providers and systems it depends on in production.",
         },
         {
           title: "Prepare",
-          description: "Leave the product in a state that can move into stabilization, launch, or team handoff without guesswork.",
+          description: "Leave the codebase ready for stabilization, launch, or continued product work instead of another messy handoff.",
         },
       ]}
       process={[
         {
-          title: "Product and repo intake",
-          description: "Share the current app, product direction, user flow goals, and what is already built versus still missing.",
+          title: "Prototype intake",
+          description: "Share the current repo, product goal, known blockers, and the difference between what demos well and what is actually missing.",
         },
         {
-          title: "Build sequence definition",
-          description: "Hexglyph identifies the critical path for the next usable release and where architecture choices need tightening.",
+          title: "Critical-path definition",
+          description: "Hexglyph identifies the product slice that matters next and the technical choices that need tightening before implementation continues.",
         },
         {
-          title: "Implementation sprint",
-          description: "Core product slices are built or completed with attention to maintainability, operational basics, and delivery momentum.",
+          title: "Focused implementation",
+          description: "The missing release-critical pieces are built with attention to maintainability, operational basics, and realistic product behavior.",
         },
         {
           title: "Launch handoff",
-          description: "You leave with a clearer codebase, next-step plan, and a narrower list of what still needs to happen before scale.",
+          description: "You leave with a stronger codebase, clearer next steps, and a narrower path into stabilization or production readiness.",
         },
       ]}
+      expectedOutputTitle="Expected output"
+      expectedOutputDescription="The result should look like an implementation-ready product slice, not another concept deck."
+      expectedOutputs={[
+        "A clearer release scope for the next working version of the AI app.",
+        "Implemented or completed product flows across frontend, backend, and AI features.",
+        "Technical notes for what still needs to happen before launch or scale.",
+        "A codebase that is easier to stabilize, hand off, or keep extending.",
+      ]}
       signals={[
-        "AI app development",
-        "AI app development help",
-        "build AI app",
-        "AI app developer",
+        "AI app development for startups",
         "AI MVP development",
+        "AI app development for founders",
+        "custom AI app development Next.js",
+        "AI SaaS MVP development",
         "LLM app development",
-        "AI product engineering",
-        "launch AI app",
+        "founder built AI app",
+        "AI-generated prototype to product",
       ]}
       faqs={[
         {
-          question: "Can Hexglyph help build an AI app from an early prototype?",
+          question: "Can Hexglyph help after a founder already built the first version?",
           answer:
-            "Yes. Hexglyph can help shape and implement the next real release of an AI app when the prototype, generated UI, or partial codebase is not yet a usable product.",
+            "Yes. Hexglyph is specifically useful when a founder-built or AI-generated MVP already exists, but the app still needs product-grade engineering before a serious release.",
         },
         {
-          question: "Do you only work on fixes, or also on new AI app development?",
+          question: "Is this different from generic AI app development agency work?",
           answer:
-            "Both. Hexglyph handles stabilization work, but can also help founders and teams build missing product slices, integrations, and production-grade foundations for a new AI app.",
+            "Yes. The focus is not a generic custom-software pitch. The focus is finishing and hardening an existing prototype or early MVP that already has momentum.",
         },
         {
-          question: "Can this include architecture and scope guidance?",
+          question: "Do you work from generated apps and half-finished repositories?",
           answer:
-            "Yes. AI app development help often starts with scoping and architecture choices so implementation time goes into the right release slice instead of avoidable rework.",
+            "Yes. That is a common starting point. Hexglyph can work from code generated with Lovable, Bolt, v0, Cursor, Claude Code, Replit, or internal founder-built prototypes.",
         },
         {
-          question: "Is this a fit if an AI builder already generated part of the app?",
+          question: "What happens after this page's scope is complete?",
           answer:
-            "Yes. Hexglyph can work from generated or partially built codebases and turn them into cleaner, more reliable product foundations.",
+            "The usual next step is AI app stabilization, production readiness, or a security review depending on which risks remain before launch.",
         },
       ]}
       relatedPages={[
         {
           href: "/ai-app-consulting",
-          title: "AI app consulting",
-          description: "For scope, architecture, and product-delivery decisions before or during the build.",
-        },
-        {
-          href: "/ai-app-setup",
-          title: "AI app setup and configuration",
-          description: "For provider setup, environment configuration, and delivery plumbing around the core app.",
+          title: "AI app technical consulting",
+          description: "For teams that need architecture and sequencing decisions before more implementation work.",
         },
         {
           href: "/ai-app-production-readiness",
           title: "AI app production readiness",
-          description: "For launch preparation once the AI app exists and needs operational hardening.",
+          description: "For teams moving from working product slices into launch preparation and operational hardening.",
+        },
+        {
+          href: "/vibe-code-rescue",
+          title: "Vibe code rescue",
+          description: "For products already moving fast but now showing structural cracks from generated code.",
         },
       ]}
-      contactTitle="Need senior help building or finishing an AI app?"
-      contactDescription="Send the current repo, the product goal, and what is blocked. Hexglyph can scope the next build slice or step into implementation support."
+      contactTitle="Need help turning the prototype into a real AI product?"
+      contactDescription="Send the current repo, the product goal, and what is still missing between the demo and a release people can actually use."
     />
   )
 }

@@ -6,22 +6,26 @@ const baseUrl = "https://hexglyph.com"
 const pageUrl = `${baseUrl}/ai-app-consulting`
 const auditHref = buildContactHref({ service: "ai-app-consulting", source: "ai-app-consulting-page" })
 
-const title = "AI App Consulting for Architecture, Scope and Delivery Decisions"
+const title = "AI App Technical Consulting for Startups and Product Teams"
 const description =
-  "AI app consulting for founders and product teams that need help scoping features, reviewing architecture, choosing the right implementation path, and deciding what to build or fix next."
+  "Hexglyph provides technical consulting for AI app architecture, risk, scope, vendor review, provider selection, delivery sequencing, and production planning for startups and product teams."
 
 export const metadata: Metadata = {
   title,
   description,
+  robots: {
+    index: true,
+    follow: true,
+  },
   keywords: [
-    "AI app consulting",
-    "AI app consultant",
-    "AI app architecture review",
-    "AI app strategy",
-    "AI MVP consulting",
-    "LLM app consulting",
-    "AI product consulting",
-    "technical consulting for AI apps",
+    "AI app technical consulting",
+    "AI product technical advisor",
+    "AI software architecture consulting",
+    "LLM app architecture consultant",
+    "AI implementation consultant for startups",
+    "RAG architecture consulting",
+    "agent architecture consulting",
+    "AI build versus buy",
   ],
   alternates: {
     canonical: "/ai-app-consulting",
@@ -37,7 +41,7 @@ export const metadata: Metadata = {
         url: "/og-technical-audit.svg",
         width: 1200,
         height: 630,
-        alt: "AI app consulting for architecture, scope and delivery decisions",
+        alt: "AI app technical consulting for startups and product teams",
       },
     ],
   },
@@ -52,139 +56,171 @@ export const metadata: Metadata = {
 export default function AiAppConsultingPage() {
   return (
     <ServiceLandingPage
-      badge="AI app consulting"
-      title="Get senior engineering judgment before the AI app gets more expensive."
+      badge="AI app technical consulting"
+      title="Technical consulting for AI app architecture, risk and delivery"
       description={description}
       pageUrl={pageUrl}
       auditHref={auditHref}
-      introNote="Main indexing terms: AI app consulting, AI app consultant, AI app architecture review, AI app strategy, AI MVP consulting, LLM app consulting, AI product consulting, technical consulting for AI apps."
+      introNote="Main indexing terms: AI app technical consulting, AI product technical advisor, AI software architecture consulting, LLM app architecture consultant, AI implementation consultant for startups, RAG architecture consulting."
       heroStats={[
         { label: "Architecture", value: "Needs review" },
         { label: "Scope drift", value: "High" },
-        { label: "Tech choices", value: "Unclear" },
-        { label: "Next move", value: "Blocked" },
+        { label: "Provider choice", value: "Open" },
+        { label: "Delivery plan", value: "Blocked" },
       ]}
-      symptomTitle="When consulting is the highest-leverage step"
-      symptomDescription="Sometimes the biggest problem is not raw implementation capacity. It is a lack of confidence about architecture, sequencing, risk, and what the product should do next."
+      audiencesTitle="Who this is for"
+      audiencesDescription="This is for founders, product leads, and teams that already have activity around an AI product but need sharper technical decision support before they spend more money building."
+      audiences={[
+        "Startups choosing between building on generated output, extending it, or replacing parts of it.",
+        "Product teams deciding between providers, RAG architecture, agent patterns, or internal build versus vendor options.",
+        "Founders who need an outside senior technical advisor before hiring more engineers or approving more scope.",
+        "Teams with an existing MVP that need a realistic stabilization or launch sequence instead of more debate.",
+      ]}
+      symptomTitle="When consulting is the highest-leverage move"
+      symptomDescription="The problem is often not raw coding capacity. It is weak technical decision-making around architecture, scope, sequencing, risk, and what the product should actually become next."
       symptoms={[
         {
-          title: "The team is debating too many options",
-          description: "Different people are pushing different stacks, AI patterns, or product bets, but no one has reduced the choices to a practical build path.",
+          title: "The team is circling around too many options",
+          description: "Provider choices, architecture patterns, and feature priorities are still being debated without a defensible implementation path.",
         },
         {
-          title: "A prototype exists but the direction is weak",
-          description: "The app may already run, but the architecture, scope, and delivery model still feel improvised or hard to defend.",
+          title: "The product exists, but the technical direction is thin",
+          description: "A demo, generated app, or partial codebase exists, but the team still lacks a strong technical frame for what to build, fix, or cut next.",
         },
         {
-          title: "You need an outside technical opinion",
-          description: "Founders, agencies, or internal teams want a senior engineering read before hiring more people or expanding scope.",
+          title: "Build versus refactor is unclear",
+          description: "It is not obvious whether the app should be stabilized, partly rewritten, kept as is, or re-scoped to protect delivery.",
         },
         {
-          title: "Build versus refactor is not obvious",
-          description: "It is unclear whether the current AI app should be extended, stabilized, partly rewritten, or re-scoped.",
+          title: "Budget is being spent faster than clarity improves",
+          description: "The team needs senior judgment that reduces ambiguity before more effort disappears into the wrong implementation path.",
         },
       ]}
-      deliverablesTitle="Consulting output"
-      deliverablesDescription="The consulting work is designed to turn uncertainty into a concrete build, refactor, or launch decision package."
+      deliverablesTitle="Turn product pressure into defensible technical decisions"
+      deliverablesDescription="The consulting work is meant to convert uncertainty into a practical architecture, scope, and delivery direction that another engineer or team can act on."
       deliverables={[
-        "Review the current product concept and codebase direction",
-        "Assess architecture fit for the actual user and business flow",
-        "Clarify what belongs in the next release and what should wait",
-        "Identify risky implementation shortcuts before they spread",
-        "Recommend build, refactor, or stabilization paths",
-        "Map dependencies across AI features, data, and product operations",
-        "Create a practical backlog with sequencing guidance",
-        "Support founder or team decisions with senior technical framing",
+        "Review architecture choices for frontend, backend, AI workflows, and delivery seams",
+        "Assess build versus buy decisions around providers, vendors, or internal tooling",
+        "Recommend model and provider choices based on product risk and operational fit",
+        "Review RAG, agent, and orchestration patterns against the actual product need",
+        "Estimate delivery and maintenance cost drivers before they become budget traps",
+        "Set a realistic security baseline and production path for the current product stage",
+        "Translate findings into a roadmap and next-sprint decision package",
+        "Support founder and product-team decisions with outside senior technical judgment",
       ]}
-      valuesTitle="Consulting that produces engineering decisions, not generic brainstorming."
-      valuesDescription="The output should help the team stop circling and start moving with a more coherent technical path."
+      toolingTitle="Tools covered"
+      toolingDescription="The consulting work is anchored in the actual systems, providers, and architecture options already under consideration."
+      tools={[
+        "OpenAI",
+        "Anthropic",
+        "RAG",
+        "Agentic apps",
+        "Lovable",
+        "Bolt.new",
+        "v0",
+        "Cursor",
+        "Claude Code",
+        "Replit",
+        "Supabase",
+        "Firebase",
+      ]}
+      valuesTitle="Consulting that produces engineering direction, not generic brainstorming."
+      valuesDescription="The output should help the team stop circling and start building with a more coherent technical path."
       values={[
         {
           title: "Clarify",
-          description: "Reduce ambiguity around architecture, sequencing, and scope so engineering work starts from a stronger base.",
+          description: "Reduce ambiguity around architecture, provider choice, delivery order, and what really belongs in the next release.",
         },
         {
           title: "Challenge",
-          description: "Surface weak assumptions, brittle shortcuts, and unnecessary complexity before they become delivery debt.",
+          description: "Surface weak assumptions, brittle shortcuts, and unnecessary complexity before they become product debt.",
         },
         {
           title: "Prioritize",
-          description: "Separate what is critical for the next release from what is merely interesting or premature.",
+          description: "Separate must-have technical work from everything that is merely interesting, fashionable, or premature.",
         },
         {
           title: "Translate",
-          description: "Turn product pressure into a technical plan another engineer can execute with less confusion.",
+          description: "Turn product pressure into a technical plan another team can actually execute.",
         },
       ]}
       process={[
         {
           title: "Context intake",
-          description: "Share the current product goal, repository, AI workflow, blockers, and the decisions that feel uncertain.",
+          description: "Share the current product, repository, architecture options, blockers, and the decisions that still feel unstable.",
         },
         {
-          title: "Architecture and scope review",
-          description: "Hexglyph reviews the app shape, stack choices, missing pieces, and delivery risks against the intended outcome.",
+          title: "Architecture and risk review",
+          description: "Hexglyph reviews the product shape, provider choices, delivery model, operational assumptions, and where the real technical risk sits.",
         },
         {
-          title: "Decision framing",
-          description: "You receive a clear recommendation for what to build, cut, refactor, or validate before spending more engineering time.",
+          title: "Decision package",
+          description: "You receive a practical recommendation for what to build, delay, re-scope, or harden before more engineering time gets spent.",
         },
         {
           title: "Execution handoff",
-          description: "The consulting output can feed directly into an internal sprint, external build partner, or a follow-on Hexglyph implementation scope.",
+          description: "The consulting output can feed directly into an internal build sprint, an agency handoff, or a narrower Hexglyph implementation scope.",
         },
       ]}
+      expectedOutputTitle="Expected output"
+      expectedOutputDescription="The point is to leave with technical decisions that are actionable enough to change what gets built next."
+      expectedOutputs={[
+        "An architecture read on whether the current AI product direction is viable or drifting.",
+        "A recommended path for build versus refactor versus partial replacement.",
+        "A clearer roadmap for scope, provider choice, security baseline, and delivery order.",
+        "A technical decision package another engineer can use without decoding vague strategy language.",
+      ]}
       signals={[
-        "AI app consulting",
-        "AI app consultant",
-        "AI app architecture review",
-        "AI app strategy",
-        "AI MVP consulting",
-        "LLM app consulting",
-        "AI product consulting",
-        "technical consulting for AI apps",
+        "AI app technical consulting",
+        "AI product technical advisor",
+        "AI software architecture consulting",
+        "LLM app architecture consultant",
+        "AI implementation consultant for startups",
+        "RAG architecture consulting",
+        "agent architecture consulting",
+        "AI build versus buy",
       ]}
       faqs={[
         {
-          question: "What does AI app consulting include?",
+          question: "What does AI app technical consulting include?",
           answer:
-            "Hexglyph AI app consulting covers scope review, architecture judgment, implementation sequencing, risk mapping, and recommendations for what to build, fix, or delay.",
+            "Hexglyph reviews architecture, scope, provider decisions, RAG or agent patterns, delivery sequencing, production risk, and the next technical decision package for the team.",
         },
         {
           question: "Is this useful if we already have developers?",
           answer:
-            "Yes. Consulting is often most useful when a team can build, but needs outside senior judgment on architecture, scope, or how to avoid expensive rework.",
+            "Yes. Consulting is often most useful when a team can build, but needs outside senior judgment on architecture, scope, vendor choice, or how to avoid expensive rework.",
         },
         {
-          question: "Can consulting start from a generated app or an MVP?",
+          question: "Can consulting start from a generated app or early MVP?",
           answer:
-            "Yes. Hexglyph can review AI-generated apps, partially built MVPs, or existing codebases that need clearer technical direction.",
+            "Yes. A generated app, founder-built prototype, or partially shipped MVP is a common starting point for this kind of technical decision support.",
         },
         {
           question: "Can consulting lead into implementation support?",
           answer:
-            "Yes. If needed, consulting can be followed by a technical audit, stabilization sprint, or a narrower implementation scope.",
+            "Yes. The next step is often a technical audit, a stabilization sprint, or a more focused production-readiness or security scope.",
         },
       ]}
       relatedPages={[
         {
           href: "/technical-audit",
           title: "Technical audit service",
-          description: "For a deeper written diagnosis of an existing codebase and its delivery risks.",
+          description: "For a broader written diagnosis of the existing codebase and its delivery risks.",
         },
         {
           href: "/ai-app-development",
-          title: "AI app development help",
-          description: "For teams that already know the direction and now need focused build support.",
+          title: "AI app development for founder-built MVPs",
+          description: "For teams that already know the direction and now need focused implementation help.",
         },
         {
-          href: "/ai-app-stabilization",
-          title: "AI app stabilization",
-          description: "For generated or fragile AI apps that already exist and need engineering correction.",
+          href: "/vibe-code-rescue",
+          title: "Vibe code rescue",
+          description: "For AI-built apps where delivery speed created structural debt that now needs correction.",
         },
       ]}
-      contactTitle="Need AI app consulting before the next delivery decision?"
-      contactDescription="Send the current product context, repo, and the technical choices you are stuck on. Hexglyph can frame the next move with less ambiguity."
+      contactTitle="Need outside technical judgment before the next AI app decision?"
+      contactDescription="Send the current product context, architecture choices, and where the team is stuck. Hexglyph can help frame the next move with less ambiguity."
     />
   )
 }

@@ -6,19 +6,21 @@ const baseUrl = "https://hexglyph.com"
 const pageUrl = `${baseUrl}/cursor-code-cleanup`
 const auditHref = buildContactHref({ service: "cursor-code-cleanup", source: "cursor-code-cleanup-page" })
 
-const title = "Cursor Code Cleanup and AI-Generated Code Refactoring"
+const title = "Cursor Code Cleanup for Vibe-Coded Apps"
 const description =
-  "Cursor code cleanup and AI-generated code refactoring for teams that shipped fast and now need better structure, fewer regressions, safer patterns, and production-grade delivery."
+  "Hexglyph cleans up Cursor-generated code in vibe-coded apps that shipped fast and now need stronger structure, fewer regressions, safer patterns, and a more maintainable product foundation."
 
 export const metadata: Metadata = {
   title,
   description,
   keywords: [
     "Cursor code cleanup",
+    "Cursor code audit",
     "AI generated code refactoring",
+    "AI-generated code audit",
     "cleanup Cursor generated code",
     "fix AI generated app code",
-    "codebase cleanup service",
+    "vibe coded app cleanup",
     "refactor generated code",
   ],
   alternates: {
@@ -55,12 +57,20 @@ export default function CursorCodeCleanupPage() {
       description={description}
       pageUrl={pageUrl}
       auditHref={auditHref}
-      introNote="Main indexing terms: Cursor code cleanup, AI-generated code refactoring, codebase cleanup service, and generated code maintenance."
+      introNote="Main indexing terms: Cursor code cleanup, Cursor code audit, AI-generated code audit, AI-generated code refactoring, vibe coded app cleanup, and generated code maintenance."
       heroStats={[
         { label: "Duplication", value: "Reduced" },
         { label: "Structure", value: "Clarified" },
         { label: "Bug risk", value: "Lower" },
         { label: "Handoff", value: "Cleaner" },
+      ]}
+      audiencesTitle="Who this is for"
+      audiencesDescription="This page is for teams that used Cursor heavily to create product momentum and now need stronger engineering structure before the codebase becomes too fragile to keep extending."
+      audiences={[
+        "Cursor-heavy apps with duplicated components, inconsistent flows, and weak module boundaries.",
+        "Founders or teams that shipped fast and now need the codebase to survive real iteration.",
+        "Products where generated code quality is blocking launch confidence or developer handoff.",
+        "Apps that need cleanup and refactoring without wasting the useful work already done.",
       ]}
       symptomTitle="When generated code starts costing more than it saves"
       symptomDescription="AI-assisted coding is useful for speed, but teams eventually hit a point where unclear patterns, duplication, and fragile decisions make every next change more expensive."
@@ -93,6 +103,18 @@ export default function CursorCodeCleanupPage() {
         "Safer organization for files, modules, and responsibilities",
         "Production-hardening recommendations",
         "A handoff-ready plan for continued development",
+      ]}
+      toolingTitle="Tools covered"
+      toolingDescription="The cleanup work is aimed at Cursor-generated repositories and the frameworks around them, not toy examples."
+      tools={[
+        "Cursor",
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Supabase",
+        "Firebase",
+        "Postgres",
+        "Vercel",
       ]}
       valuesTitle="Generated code still needs senior engineering judgment."
       valuesDescription="Cleanup is useful when generated output is already in use but the codebase structure is slowing down maintenance and extension."
@@ -132,12 +154,22 @@ export default function CursorCodeCleanupPage() {
           description: "If needed, the highest-leverage cleanup and hardening work is implemented first so the product becomes easier to evolve safely.",
         },
       ]}
+      expectedOutputTitle="Expected output"
+      expectedOutputDescription="The point is to leave with a codebase that feels engineered instead of merely generated."
+      expectedOutputs={[
+        "A ranked view of which Cursor-generated patterns are dangerous, messy, or merely annoying.",
+        "A cleanup path for duplication, weak boundaries, validation gaps, and maintainability risk.",
+        "A codebase that is easier to extend, hand off, and production-harden.",
+        "A clearer answer to whether the product needs cleanup, a broader rescue, or a deeper audit next.",
+      ]}
       signals={[
         "Cursor code cleanup",
+        "Cursor code audit",
         "AI generated code refactoring",
+        "AI-generated code audit",
         "cleanup Cursor generated code",
         "fix AI generated app code",
-        "codebase cleanup service",
+        "vibe coded app cleanup",
         "refactor generated code",
       ]}
       faqs={[
@@ -164,19 +196,19 @@ export default function CursorCodeCleanupPage() {
       ]}
       relatedPages={[
         {
-          href: "/ai-app-stabilization",
-          title: "AI app stabilization",
-          description: "For broader stabilization of AI-generated apps beyond code cleanup alone.",
+          href: "/ai-generated-code-audit",
+          title: "AI-generated code audit",
+          description: "For a broader audit of generated code quality, security, and delivery risk before cleanup starts.",
         },
         {
-          href: "/mvp-rescue",
-          title: "MVP rescue",
-          description: "For unstable startup products that need launch-focused bug fixing and production hardening.",
+          href: "/vibe-code-rescue",
+          title: "Vibe code rescue",
+          description: "For broader rescue work when the problem is larger than Cursor cleanup alone.",
         },
         {
-          href: "/technical-audit",
-          title: "Technical audit service",
-          description: "For diagnosis, prioritization, and a risk-ranked implementation plan.",
+          href: "/ai-app-security-review",
+          title: "AI app security review",
+          description: "For security-specific review when generated code may also be exposing secrets, auth, or data risks.",
         },
       ]}
       contactTitle="Need to clean up AI-generated code before it slows every next decision?"

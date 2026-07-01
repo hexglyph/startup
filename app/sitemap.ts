@@ -16,8 +16,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...servicePageCatalog.map((page) => ({
       url: `${baseUrl}${page.href}`,
       lastModified,
-      changeFrequency: "weekly" as const,
-      priority: 0.9,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
     })),
   ]
 }

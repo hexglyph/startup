@@ -9,22 +9,26 @@ const auditHref = buildContactHref({
   source: "ai-app-production-readiness-page",
 })
 
-const title = "AI App Production Readiness for Launch, Deployment and Stability"
+const title = "AI App Production Readiness Review for Vibe-Coded MVPs"
 const description =
-  "AI app production readiness support for teams preparing launch. Review deployment, monitoring, error handling, environment separation, fallback behavior, and operational basics before real users arrive."
+  "Hexglyph reviews AI-built apps made with Lovable, Bolt, v0, Cursor, Claude Code, and Replit, then hardens security, architecture, deployment, observability, and maintainability for production."
 
 export const metadata: Metadata = {
   title,
   description,
+  robots: {
+    index: true,
+    follow: true,
+  },
   keywords: [
     "AI app production readiness",
-    "AI app launch support",
-    "AI app deployment",
-    "production ready AI app",
-    "AI app production checklist",
-    "AI app monitoring",
-    "AI app observability",
-    "AI app launch engineering",
+    "AI-built app production ready",
+    "vibe coded app production readiness",
+    "Lovable app production ready",
+    "Bolt app production readiness",
+    "Cursor app production readiness",
+    "AI-generated MVP production checklist",
+    "AI app launch review",
   ],
   alternates: {
     canonical: "/ai-app-production-readiness",
@@ -40,7 +44,7 @@ export const metadata: Metadata = {
         url: "/og-technical-audit.svg",
         width: 1200,
         height: 630,
-        alt: "AI app production readiness for launch, deployment and stability",
+        alt: "AI app production readiness review for vibe-coded MVPs",
       },
     ],
   },
@@ -56,138 +60,172 @@ export default function AiAppProductionReadinessPage() {
   return (
     <ServiceLandingPage
       badge="AI app production readiness"
-      title="Prepare the AI app for launch, not just for another internal demo."
+      title="Make your AI-built app production-ready"
       description={description}
       pageUrl={pageUrl}
       auditHref={auditHref}
-      introNote="Main indexing terms: AI app production readiness, AI app launch support, AI app deployment, production ready AI app, AI app production checklist, AI app monitoring, AI app observability, AI app launch engineering."
+      introNote="Main indexing terms: AI app production readiness, AI-built app production ready, vibe coded app production readiness, Lovable app production ready, Bolt app production readiness, Cursor app production readiness, AI-generated MVP production checklist."
       heroStats={[
-        { label: "Deployment path", value: "Needs review" },
-        { label: "Monitoring", value: "Thin" },
-        { label: "Failure modes", value: "Unchecked" },
+        { label: "Security", value: "Needs hardening" },
+        { label: "Observability", value: "Thin" },
+        { label: "Rollback path", value: "Missing" },
         { label: "Launch checklist", value: "Incomplete" },
       ]}
-      symptomTitle="Why launch still feels risky"
-      symptomDescription="AI apps often look finished before the launch-critical work is done. Production readiness is where operational reality, traffic, costs, and real user behavior expose what the app is still missing."
+      audiencesTitle="Who this is for"
+      audiencesDescription="This page is for founders and product teams that already have an AI-built MVP in motion and need a launch-readiness review before more users, more data, or more spend make the weak spots obvious."
+      audiences={[
+        "Lovable, Bolt, v0, Cursor, Claude Code, or Replit apps that already have a working prototype and now need production engineering.",
+        "Startup teams preparing a first launch, pilot, sales demo rollout, or handoff to internal engineering.",
+        "Products that have UI and basic flows, but still lack a real production checklist.",
+        "Teams that want hardening without wasting time on a full rewrite when targeted engineering is enough.",
+      ]}
+      symptomTitle="Why AI-built apps still fail close to launch"
+      symptomDescription="The prototype can look convincing long before the production layer exists. The real risk usually sits in security, authentication, environment hygiene, observability, deployment, rollback, rate limits, backups, and cost control."
       symptoms={[
         {
-          title: "The app works in demo mode, not in production mode",
-          description: "Basic flows work during a walkthrough, but error states, rate limits, concurrency, or real-user behavior have not been handled well enough.",
+          title: "The app works in demos, not in production conditions",
+          description: "Happy-path flows exist, but real failure states, concurrency, data integrity, and runtime visibility are still weak or missing.",
         },
         {
-          title: "Deployment exists but confidence does not",
-          description: "There may already be a live environment, yet rollback, observability, config hygiene, and failure handling are still weak.",
+          title: "Launch risk is spread across too many hidden seams",
+          description: "Security, auth, logging, rollbacks, backups, and environment configuration have not been reviewed as one production system.",
         },
         {
-          title: "Operational gaps are still open",
-          description: "Logging, alerts, cost awareness, fallback behavior, and incident response notes are missing or too informal to trust.",
+          title: "Generated code left operational debt behind",
+          description: "The app shipped fast, but the production basics around it were never completed with senior engineering discipline.",
         },
         {
-          title: "The launch date is close",
-          description: "The team needs focused engineering judgment on what must be hardened now versus what can wait until after release.",
+          title: "Every new user increases the cost of weak assumptions",
+          description: "The later these issues are found, the more expensive they become in credibility, incidents, and engineering time.",
         },
       ]}
-      deliverablesTitle="Launch-readiness review"
-      deliverablesDescription="The work focuses on the operational and release layer that sits between a working product and a dependable launch."
+      deliverablesTitle="A production-readiness review for AI-built MVPs"
+      deliverablesDescription="Before launch, Hexglyph reviews authentication, authorization, database integrity, API routes, environment variables, logging, backups, rate limits, deployment configuration, rollback, and AI-specific runtime risks."
       deliverables={[
-        "Review deployment flow, environments, and release assumptions",
-        "Harden error handling, retries, and user-facing failure states",
-        "Check logging, monitoring, alerts, and operational visibility",
-        "Review environment separation and production configuration hygiene",
-        "Identify missing fallback behavior for AI and integration failures",
-        "Map launch blockers by severity and remediation effort",
-        "Create a production-readiness checklist for the current release",
-        "Document the next hardening steps after launch",
+        "Review authentication, authorization, session handling, and role boundaries",
+        "Check database integrity, migrations, schema assumptions, and recovery risk",
+        "Review secrets management, environment variables, staging and production split",
+        "Assess logging, error handling, observability, alerts, and incident visibility",
+        "Review rate limits, third-party provider failure handling, retries, and fallbacks",
+        "Check deployment, rollback, backups, domain setup, and release assumptions",
+        "Review cost controls, accessibility, performance, and maintainability risks",
+        "Produce a ranked checklist of production blockers and next hardening actions",
       ]}
-      valuesTitle="Production readiness is where the launch gets defensible."
-      valuesDescription="The goal is to remove avoidable launch risk by making the operational layer visible, prioritized, and actionable."
+      toolingTitle="Tools covered"
+      toolingDescription="The review covers the app builders, frameworks, providers, and operational tools that usually surround an AI-built MVP."
+      tools={[
+        "Lovable",
+        "Bolt.new",
+        "v0",
+        "Cursor",
+        "Claude Code",
+        "Replit",
+        "Next.js",
+        "React",
+        "Vercel",
+        "Supabase",
+        "Firebase",
+        "Postgres",
+        "Sentry",
+        "PostHog",
+      ]}
+      valuesTitle="Production readiness is where the launch becomes defensible."
+      valuesDescription="The goal is to expose the missing operational layer before it turns into avoidable outages, security issues, or broken trust with early users."
       values={[
         {
           title: "Stress",
-          description: "Look at the app through realistic production failure modes instead of happy-path demos.",
+          description: "Look at the app through realistic launch and runtime failure modes instead of happy-path internal demos.",
         },
         {
           title: "Harden",
-          description: "Fix or surface the areas where deployment, runtime behavior, and operator visibility are still weak.",
+          description: "Surface and fix the missing production basics around auth, deployment, observability, and data safety.",
         },
         {
           title: "Sequence",
-          description: "Clarify what is essential before launch and what belongs in the first post-launch hardening wave.",
+          description: "Clarify what must happen before launch and what can wait for the first post-launch hardening wave.",
         },
         {
           title: "Launch",
-          description: "Leave the team with a cleaner release path and more confidence in what the system can handle.",
+          description: "Leave the team with a production checklist that is concrete enough to act on immediately.",
         },
       ]}
       process={[
         {
-          title: "Release context intake",
-          description: "Share the current environments, launch target, known incidents, and where operational confidence is still low.",
+          title: "Launch-context intake",
+          description: "Share the current repo, environment setup, launch target, incidents, and where the team still lacks operational confidence.",
         },
         {
-          title: "Production review",
-          description: "Hexglyph reviews the live path across deployment, runtime behavior, observability, and AI-specific failure handling.",
+          title: "Production-readiness review",
+          description: "Hexglyph reviews the app across security, auth, data, deployment, logging, fallbacks, rollback, and AI-specific production risk.",
         },
         {
-          title: "Risk-ranked hardening list",
-          description: "You receive a release-focused view of what must be fixed now, monitored closely, or deferred intentionally.",
+          title: "Risk-ranked checklist",
+          description: "You receive a ranked list of blockers, weak assumptions, and the hardening order that matters most before launch.",
         },
         {
-          title: "Launch support path",
-          description: "The outcome is a clearer launch checklist, a stabilization scope, or a set of targeted production fixes.",
+          title: "Execution path",
+          description: "The next step becomes a targeted hardening sprint, narrower remediation work, or a defined go-live checklist.",
         },
+      ]}
+      expectedOutputTitle="Expected output"
+      expectedOutputDescription="The output is a concrete production checklist rather than a vague recommendation that the app should be 'more robust'."
+      expectedOutputs={[
+        "A ranked production-readiness checklist covering security, auth, data, logging, deployment, and operational risk.",
+        "A short list of launch blockers that should be fixed before more traffic or paying users arrive.",
+        "Implementation-ready notes for rollback, backups, observability, and AI-specific failure handling.",
+        "A clear view of what can launch now, what must be hardened first, and what belongs in post-launch cleanup.",
       ]}
       signals={[
         "AI app production readiness",
-        "AI app launch support",
-        "AI app deployment",
-        "production ready AI app",
-        "AI app production checklist",
-        "AI app monitoring",
-        "AI app observability",
-        "AI app launch engineering",
+        "AI-built app production ready",
+        "vibe coded app production readiness",
+        "Lovable app production ready",
+        "Bolt app production readiness",
+        "Cursor app production readiness",
+        "AI-generated MVP production checklist",
+        "AI app launch review",
       ]}
       faqs={[
         {
-          question: "What is included in AI app production readiness work?",
+          question: "Can an app built with Lovable or Bolt go to production?",
           answer:
-            "Hexglyph reviews deployment assumptions, environment setup, failure handling, observability, fallback behavior, and release blockers that affect a safe AI app launch.",
+            "Yes, but it usually needs a real production-readiness review first. Hexglyph checks the missing engineering layer around auth, data, deployment, observability, and operational safety.",
         },
         {
-          question: "Is this different from a technical audit?",
+          question: "What usually breaks in AI-generated apps close to launch?",
           answer:
-            "Yes. A technical audit covers the broader codebase and delivery picture. Production readiness is narrower and focused on launch, runtime risk, and operational confidence.",
+            "Common failures include weak authentication, missing authorization checks, exposed secrets, incomplete environment separation, poor error handling, thin logging, weak rollback paths, and brittle third-party integrations.",
         },
         {
-          question: "Can this help if the app is already live?",
+          question: "Do you rebuild the app or stabilize the existing code?",
           answer:
-            "Yes. Production readiness work is also useful for existing AI apps that launched quickly and now need more reliable operations and release discipline.",
+            "Usually the right move is targeted stabilization and hardening. The review is meant to clarify whether the current app can be safely corrected or whether a deeper change is justified.",
         },
         {
-          question: "Do you handle implementation after the review?",
+          question: "What do I receive after the production-readiness review?",
           answer:
-            "Yes. If needed, Hexglyph can follow the review with a targeted hardening sprint to fix the highest-risk issues before or after launch.",
+            "You receive a ranked launch-readiness checklist, the highest-risk blockers, and a practical hardening sequence for what should happen before and after launch.",
         },
       ]}
       relatedPages={[
         {
           href: "/ai-app-security-review",
           title: "AI app security review",
-          description: "For auth, permission, secret, and data exposure risks that often surface before launch.",
+          description: "For prompt injection, auth bypass, secret exposure, RAG leaks, and other security-specific AI app risks.",
+        },
+        {
+          href: "/vibe-code-rescue",
+          title: "Vibe code rescue",
+          description: "For AI-generated apps that already feel structurally fragile before launch even starts.",
         },
         {
           href: "/ai-app-setup",
           title: "AI app setup and configuration",
-          description: "For environment, provider, and deployment plumbing that often blocks production readiness.",
-        },
-        {
-          href: "/ai-app-stabilization",
-          title: "AI app stabilization",
-          description: "For broader bug fixing and refactoring when launch blockers live inside the app itself.",
+          description: "For environment, provider, auth, and deployment plumbing that usually blocks production readiness.",
         },
       ]}
-      contactTitle="Need an AI app launch-readiness review?"
-      contactDescription="Send the repo, deployment target, and what still feels risky before release. Hexglyph can turn that into a focused hardening and launch plan."
+      contactTitle="Need a production-readiness review before launch?"
+      contactDescription="Send the repo, deployment target, and what still feels risky before release. Hexglyph can turn that into a concrete hardening checklist and execution path."
     />
   )
 }

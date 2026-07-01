@@ -64,6 +64,14 @@ export default function TechnicalAuditPage() {
         { label: "Delivery blockers", value: "Visible" },
         { label: "Next steps", value: "Prioritized" },
       ]}
+      audiencesTitle="Who this is for"
+      audiencesDescription="This page fits existing codebases where the app already exists, but the team still lacks a hard technical picture of what is risky, urgent, or worth fixing first."
+      audiences={[
+        "Startup teams with an MVP, AI-generated app, or internal product that keeps slipping under delivery pressure.",
+        "Founders who need an outside engineering read before hiring, expanding scope, or approving more spend.",
+        "Teams deciding whether to stabilize, refactor, or production-harden the current codebase.",
+        "Products where hidden technical debt is already distorting roadmap and launch decisions.",
+      ]}
       symptomTitle="When an audit is the right first move"
       symptomDescription="A technical audit is useful when the system already exists, the team is uncertain what to fix first, and every new feature risks compounding hidden problems."
       symptoms={[
@@ -95,6 +103,21 @@ export default function TechnicalAuditPage() {
         "Prioritized backlog with recommended order",
         "Scope guidance for the first stabilization sprint",
         "Written handoff that another engineer can actually use",
+      ]}
+      toolingTitle="Tools covered"
+      toolingDescription="The audit adapts to the current stack instead of forcing a generic process onto the repo."
+      tools={[
+        "AI-generated apps",
+        "Lovable",
+        "Bolt.new",
+        "v0",
+        "Cursor",
+        "Next.js",
+        "React",
+        "Legacy web systems",
+        "Supabase",
+        "Firebase",
+        "Postgres",
       ]}
       valuesTitle="What the audit is meant to provide."
       valuesDescription="The audit reduces uncertainty and produces an implementation plan with clearer priorities, tradeoffs, and next steps."
@@ -134,6 +157,14 @@ export default function TechnicalAuditPage() {
           description: "The audit closes with a practical path: stabilization sprint, targeted refactor, or narrower corrective work.",
         },
       ]}
+      expectedOutputTitle="Expected output"
+      expectedOutputDescription="The audit should make the next engineering decision much easier to defend."
+      expectedOutputs={[
+        "A ranked diagnosis of code, product, operational, and launch risk in the current system.",
+        "A practical backlog for what to fix now, what to defer, and where engineering should start.",
+        "A clearer answer to whether the right next move is rescue, hardening, security review, or a narrower implementation sprint.",
+        "A written handoff that another engineer or team can use without decoding vague notes.",
+      ]}
       signals={[
         "technical audit service",
         "codebase audit",
@@ -168,9 +199,9 @@ export default function TechnicalAuditPage() {
       ]}
       relatedPages={[
         {
-          href: "/ai-app-consulting",
-          title: "AI app consulting",
-          description: "For architecture, scope, and sequencing decisions when the team needs direction before implementation.",
+          href: "/vibe-code-rescue",
+          title: "Vibe code rescue",
+          description: "For AI-generated apps where the next move is not just diagnosis, but immediate structural rescue.",
         },
         {
           href: "/ai-app-production-readiness",

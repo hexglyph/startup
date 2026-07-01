@@ -35,16 +35,25 @@ export type ServiceLandingPageProps = {
   auditHref: string
   introNote: string
   heroStats: Array<{ label: string; value: string }>
+  audiences?: string[]
+  audiencesTitle?: string
+  audiencesDescription?: string
   symptomTitle: string
   symptomDescription: string
   symptoms: Array<{ title: string; description: string }>
   deliverablesTitle: string
   deliverablesDescription: string
   deliverables: string[]
+  toolingTitle?: string
+  toolingDescription?: string
+  tools?: string[]
   valuesTitle: string
   valuesDescription: string
   values: Array<{ title: string; description: string }>
   process: Array<{ title: string; description: string }>
+  expectedOutputTitle?: string
+  expectedOutputDescription?: string
+  expectedOutputs?: string[]
   signals: string[]
   faqs: Array<{ question: string; answer: string }>
   relatedPages: Array<{ href: string; title: string; description: string }>
@@ -184,7 +193,7 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg" className="bg-white text-zinc-950 hover:bg-zinc-200">
                 <LeadCtaLink href={props.auditHref} ctaId="service-hero-primary">
-                  Request Technical Audit
+                  Request Review
                   <ArrowRight className="h-5 w-5" />
                 </LeadCtaLink>
               </Button>
@@ -225,6 +234,32 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
         </div>
       </section>
 
+      {props.audiences && props.audiences.length > 0 ? (
+        <section className="border-t border-white/[0.08] bg-[#0a0a0c] px-4 py-24">
+          <div className="mx-auto max-w-7xl">
+            <div className="mx-auto mb-12 max-w-3xl text-center">
+              <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-emerald-300">
+                {props.audiencesTitle ?? "Who this is for"}
+              </p>
+              <h2 className="text-balance text-3xl font-medium text-white md:text-5xl">Teams that already have momentum, but not enough safety.</h2>
+              <p className="mt-5 text-lg leading-8 text-zinc-300">
+                {props.audiencesDescription ??
+                  "These reviews and implementation sprints fit teams that already have a prototype, a repository, or a launch target, but need stronger engineering before wider exposure."}
+              </p>
+            </div>
+
+            <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
+              {props.audiences.map((item) => (
+                <div key={item} className="rounded-lg border border-white/[0.10] bg-white/[0.035] p-5 text-sm leading-6 text-zinc-300">
+                  <CheckCircle2 className="mb-4 h-5 w-5 text-emerald-300" />
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       <section id="overview" className="px-4 py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto mb-12 max-w-3xl text-center">
@@ -252,12 +287,12 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
       <section id="deliverables" className="border-y border-zinc-200 bg-[#f3efe6] px-4 py-24 text-zinc-950">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[420px_1fr]">
           <div>
-            <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-emerald-800">{props.deliverablesTitle}</p>
-            <h2 className="text-balance text-3xl font-medium md:text-5xl">{props.valuesTitle}</h2>
+            <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-emerald-800">What Hexglyph reviews and fixes</p>
+            <h2 className="text-balance text-3xl font-medium md:text-5xl">{props.deliverablesTitle}</h2>
             <p className="mt-5 text-lg leading-8 text-zinc-700">{props.deliverablesDescription}</p>
             <Button asChild size="lg" className="mt-8 bg-zinc-950 text-white hover:bg-zinc-800">
               <LeadCtaLink href={props.auditHref} ctaId="service-deliverables-primary">
-                Start Audit Scope
+                Start Review Scope
                 <ArrowRight className="h-5 w-5" />
               </LeadCtaLink>
             </Button>
@@ -273,6 +308,30 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
           </div>
         </div>
       </section>
+
+      {props.tools && props.tools.length > 0 ? (
+        <section className="bg-[#f7f7f2] px-4 py-24 text-zinc-950">
+          <div className="mx-auto max-w-7xl">
+            <div className="mx-auto mb-12 max-w-3xl text-center">
+              <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-emerald-800">
+                {props.toolingTitle ?? "Tools covered"}
+              </p>
+              <h2 className="text-balance text-3xl font-medium md:text-5xl">Platforms, stacks, and delivery seams already in the mix.</h2>
+              <p className="mt-5 text-lg leading-8 text-zinc-700">
+                {props.toolingDescription ??
+                  "The review is grounded in the actual providers, app builders, hosting, auth, and operational tools already around the product."}
+              </p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-2">
+              {props.tools.map((item) => (
+                <Badge key={item} variant="outline" className="rounded-md border-zinc-200 bg-white px-3 py-1 text-zinc-700">
+                  {item}
+                </Badge>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section className="px-4 py-24">
         <div className="mx-auto max-w-7xl">
@@ -315,6 +374,32 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
           </div>
         </div>
       </section>
+
+      {props.expectedOutputs && props.expectedOutputs.length > 0 ? (
+        <section className="border-y border-white/[0.08] bg-[#0a0a0c] px-4 py-24">
+          <div className="mx-auto max-w-7xl">
+            <div className="mx-auto mb-12 max-w-3xl text-center">
+              <p className="mb-4 text-xs font-medium uppercase tracking-[0.22em] text-emerald-300">
+                {props.expectedOutputTitle ?? "Expected output"}
+              </p>
+              <h2 className="text-balance text-3xl font-medium text-white md:text-5xl">What the team receives after the review.</h2>
+              <p className="mt-5 text-lg leading-8 text-zinc-300">
+                {props.expectedOutputDescription ??
+                  "The output is meant to become a real execution artifact: checklist, backlog, remediation path, and handoff context."}
+              </p>
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+              {props.expectedOutputs.map((item) => (
+                <div key={item} className="rounded-lg border border-white/[0.10] bg-white/[0.035] p-6 text-sm leading-6 text-zinc-300">
+                  <CheckCircle2 className="mb-4 h-5 w-5 text-emerald-300" />
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section className="bg-[#f3efe6] px-4 py-24 text-zinc-950">
         <div className="mx-auto max-w-7xl">
@@ -383,7 +468,7 @@ export function ServiceLandingPage(props: ServiceLandingPageProps) {
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
             <Button asChild size="lg" className="bg-white text-zinc-950 hover:bg-zinc-200">
               <LeadCtaLink href={props.auditHref} ctaId="service-contact-primary">
-                Request Audit
+                Request Review
                 <ArrowRight className="h-5 w-5" />
               </LeadCtaLink>
             </Button>

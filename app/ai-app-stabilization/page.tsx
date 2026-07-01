@@ -6,25 +6,25 @@ const baseUrl = "https://hexglyph.com"
 const pageUrl = `${baseUrl}/ai-app-stabilization`
 const auditHref = buildContactHref({ service: "ai-app-stabilization", source: "ai-app-stabilization-page" })
 
-const title = "AI App Stabilization for Lovable, Bolt.new, v0 and Cursor Apps"
+const title = "AI-Generated App Stabilization for Lovable, Bolt, v0, Cursor and Replit"
 const description =
-  "Senior full-stack technical audits and stabilization sprints for AI-generated apps, Lovable apps, Bolt.new apps, v0 apps, Cursor-generated code, unstable MVPs, React app bugs, and Next.js performance issues."
+  "Hexglyph stabilizes AI-generated apps built with Lovable, Bolt, v0, Cursor, Claude Code, and Replit when the prototype works just well enough to hide structural, security, and launch risk."
 
 export const metadata: Metadata = {
   title,
   description,
   keywords: [
-    "AI generated app",
+    "AI generated app stabilization",
     "AI-generated app stabilization",
-    "Lovable app",
-    "Bolt.new app",
-    "v0 app",
+    "Lovable app fix",
+    "Bolt app fix",
+    "v0 app hardening",
     "Cursor generated code",
+    "Replit app fix",
     "MVP needs fixing",
-    "React app bugs",
-    "Next.js app performance",
-    "codebase cleanup",
-    "technical audit",
+    "vibe coded app fix",
+    "AI-built app stabilization",
+    "production hardening for generated apps",
   ],
   alternates: {
     canonical: "/ai-app-stabilization",
@@ -56,16 +56,24 @@ export default function AiAppStabilizationPage() {
   return (
     <ServiceLandingPage
       badge="AI-generated app stabilization"
-      title="Stabilize your AI-generated app for real users, real data, and production delivery."
+      title="Stabilize your AI-generated app before users find the weak spots"
       description={description}
       pageUrl={pageUrl}
       auditHref={auditHref}
-      introNote="Main indexing terms: AI generated app, Lovable app, Bolt.new app, v0 app, Cursor generated code, React app bugs, Next.js app performance, codebase cleanup, technical audit."
+      introNote="Main indexing terms: AI-generated app stabilization, Lovable app fix, Bolt app fix, v0 app hardening, Cursor generated code, Replit app fix, vibe coded app fix, AI-built app stabilization."
       heroStats={[
         { label: "Generated UI", value: "Needs validation" },
         { label: "Auth flow", value: "High risk" },
         { label: "Next.js routes", value: "Performance pass" },
         { label: "Deployment", value: "Checklist missing" },
+      ]}
+      audiencesTitle="Who this is for"
+      audiencesDescription="This is for teams that already shipped or demoed an AI-built app and now need senior engineering to stop fragile code, missing checks, and operational gaps from wrecking the next release."
+      audiences={[
+        "Lovable, Bolt, v0, Cursor, Claude Code, and Replit apps that already have users, demos, or investor pressure.",
+        "Founder-built MVPs that need stabilization before launch or handoff.",
+        "Teams seeing auth bugs, integration issues, deployment drift, or repeated regressions in generated code.",
+        "Products that can still be stabilized without defaulting to a full rewrite.",
       ]}
       symptomTitle="Platform-specific fixes"
       symptomDescription="AI builders are useful for speed. The risk appears later: unclear architecture, incomplete production basics, fragile integrations, hidden security issues, and code that becomes expensive to extend."
@@ -98,6 +106,22 @@ export default function AiAppStabilizationPage() {
         "Add validation, error handling, logging, and production checklists",
         "Review authentication, authorization, and data access risks",
         "Create a technical audit with severity, effort, and recommended order",
+      ]}
+      toolingTitle="Tools covered"
+      toolingDescription="This stabilization work starts from the AI builder or coding workflow already used to create the app."
+      tools={[
+        "Lovable",
+        "Bolt.new",
+        "v0",
+        "Cursor",
+        "Claude Code",
+        "Replit",
+        "Next.js",
+        "React",
+        "Supabase",
+        "Firebase",
+        "Postgres",
+        "Vercel",
       ]}
       valuesTitle="Senior full-stack developer judgment for generated apps under production pressure."
       valuesDescription="The work combines AI-assisted analysis with human engineering decisions across architecture, UX, security, performance, and deployment."
@@ -137,17 +161,24 @@ export default function AiAppStabilizationPage() {
           description: "A senior full-stack developer fixes the highest-risk issues and prepares the MVP or AI app for launch, handoff, or scaling.",
         },
       ]}
+      expectedOutputTitle="Expected output"
+      expectedOutputDescription="The output should move the app from fragile demo quality toward a credible release path."
+      expectedOutputs={[
+        "A prioritized list of stabilization fixes across code, auth, data, and deployment.",
+        "The highest-risk bugs, weak flows, and structural problems either fixed or clearly sequenced.",
+        "A clearer path into production readiness, security review, or launch hardening.",
+        "An app that is safer to keep extending instead of becoming more fragile with every new feature.",
+      ]}
       signals={[
-        "AI generated app",
-        "Lovable app",
-        "Bolt.new app",
-        "v0 app",
+        "AI generated app stabilization",
+        "Lovable app fix",
+        "Bolt app fix",
+        "v0 app hardening",
         "Cursor generated code",
-        "MVP needs fixing",
-        "React app bugs",
-        "Next.js app performance",
-        "codebase cleanup",
-        "technical audit",
+        "Replit app fix",
+        "vibe coded app fix",
+        "AI-built app stabilization",
+        "production hardening for generated apps",
       ]}
       faqs={[
         {
@@ -173,9 +204,9 @@ export default function AiAppStabilizationPage() {
       ]}
       relatedPages={[
         {
-          href: "/ai-app-consulting",
-          title: "AI app consulting",
-          description: "For architecture, scope, and delivery decisions before more effort goes into the current app.",
+          href: "/vibe-code-rescue",
+          title: "Vibe code rescue",
+          description: "For a more explicit rescue angle when the AI-generated app is already showing structural collapse.",
         },
         {
           href: "/ai-app-production-readiness",
@@ -188,8 +219,8 @@ export default function AiAppStabilizationPage() {
           description: "For auth, secrets, permissions, and data-exposure checks before broader rollout.",
         },
       ]}
-      contactTitle="Need technical review or implementation support for an unstable AI app?"
-      contactDescription="Send the repository context and current issues to start with a technical audit or a scoped implementation sprint."
+      contactTitle="Need implementation support for an unstable AI-built app?"
+      contactDescription="Send the repository context, builder stack, and the current failures to start with a stabilization review or a scoped implementation sprint."
     />
   )
 }
